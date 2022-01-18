@@ -478,7 +478,7 @@ data-level="2.12.3"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL have a physical switch to switch into modes which allow OTA, spoofing, etc. from d1 to d2.</p>
+<p>The device SHALL demand explicit end user consent to switch into modes witch allow OTA, spoofing, etc. from d1 to d2. Consent process should have authenticity assurance (examples include but not limited to a physical switch, out of band communication not exisiting on d1, fully authenticated communication originating on d1).</p>
 </div>
 
   </div>
@@ -488,6 +488,17 @@ data-level="2.12.3"
 
     
     
+    <div class="requirement_comment">
+      <div class="document">
+<p>Three examples:</p>
+<ol class="upperalpha simple">
+<li>Phsyical switch on dash</li>
+<li>Consent on Insrument cluster or infotainment device (and thus internal networks - possibly but not necessarily d2)</li>
+<li>Consent from third party device / application that is signed with infrastructure OEM has access to verify</li>
+</ol>
+</div>
+
+    </div>
 
   </section>
 
@@ -534,7 +545,7 @@ data-level="2.2"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL prevent Denial of Service (DoS) on d1 and furthermore prevent DoS of the bidirectional d1&lt;-&gt;d2 operation.</p>
+<p>The device SHALL prevent generating Denial of Service (DoS) on d2 from messages originating on d1.</p>
 </div>
 
   </div>
@@ -1151,7 +1162,7 @@ data-level="2.12.6"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL NOT drop CAN frames in its bidirectional d1&lt;-&gt;d2 operation.</p>
+<p>The device SHALL NOT drop CAN frames in its bidirectional d1&lt;-&gt;d2 operation, unless with explicit configuration for rate limiting (AGW-F-006) or translation (AGW-F-002)</p>
 </div>
 
   </div>
@@ -2173,7 +2184,7 @@ data-level="2.12.3"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL have a physical switch to switch into modes which allow OTA, spoofing, etc. from d1 to d2.</p>
+<p>The device SHALL demand explicit end user consent to switch into modes witch allow OTA, spoofing, etc. from d1 to d2. Consent process should have authenticity assurance (examples include but not limited to a physical switch, out of band communication not exisiting on d1, fully authenticated communication originating on d1).</p>
 </div>
 
   </div>
@@ -2183,6 +2194,17 @@ data-level="2.12.3"
 
     
     
+    <div class="requirement_comment">
+      <div class="document">
+<p>Three examples:</p>
+<ol class="upperalpha simple">
+<li>Phsyical switch on dash</li>
+<li>Consent on Insrument cluster or infotainment device (and thus internal networks - possibly but not necessarily d2)</li>
+<li>Consent from third party device / application that is signed with infrastructure OEM has access to verify</li>
+</ol>
+</div>
+
+    </div>
 
   </section>
 
@@ -2420,7 +2442,7 @@ data-level="2.12.6"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL NOT drop CAN frames in its bidirectional d1&lt;-&gt;d2 operation.</p>
+<p>The device SHALL NOT drop CAN frames in its bidirectional d1&lt;-&gt;d2 operation, unless with explicit configuration for rate limiting (AGW-F-006) or translation (AGW-F-002)</p>
 </div>
 
   </div>
@@ -2834,7 +2856,7 @@ data-level="2.12.6"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL NOT drop CAN frames in its bidirectional d1&lt;-&gt;d2 operation.</p>
+<p>The device SHALL NOT drop CAN frames in its bidirectional d1&lt;-&gt;d2 operation, unless with explicit configuration for rate limiting (AGW-F-006) or translation (AGW-F-002)</p>
 </div>
 
   </div>
@@ -3695,7 +3717,7 @@ data-level="2.2"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL prevent Denial of Service (DoS) on d1 and furthermore prevent DoS of the bidirectional d1&lt;-&gt;d2 operation.</p>
+<p>The device SHALL prevent generating Denial of Service (DoS) on d2 from messages originating on d1.</p>
 </div>
 
   </div>
