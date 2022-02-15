@@ -104,8 +104,15 @@
           Re-write / Masking
         </a></li><li><a href="#2.12.3-CGW-S-003">
           <span class="section-number">2.12.3</span>
+          Mode Switch Interlock
+        </a><ul><li><a href="#2.12.3.1-CGW-S-003A">
+          <span class="section-number">2.12.3.1</span>
           Physical Mode Switch Interlock
-        </a></li><li><a href="#2.12.4-CGW-S-004">
+        </a></li><li><a href="#2.12.3.2-CGW-S-003B">
+          <span class="section-number">2.12.3.2</span>
+          Virtual Mode Switch Interlock
+        </a></li></ul>
+            </li><li><a href="#2.12.4-CGW-S-004">
           <span class="section-number">2.12.4</span>
           Gateway Configuration Authenticated
         </a></li><li><a href="#2.12.5-CGW-S-005">
@@ -267,8 +274,6 @@ data-level="3.2.1"
     <dt><i>UID</i></dt>
     <dd>NGW-F-001</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -324,8 +329,6 @@ data-level="1.1"
     
     <dt><i>UID</i></dt>
     <dd>NGW-S-001</dd>
-    
-
     
   </dl>
     
@@ -406,15 +409,13 @@ data-level="2.1"
     <dt><i>UID</i></dt>
     <dd>AGW-S-001</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
   <li>
     <a class="requirement_link-child" href="#2.12.3-CGW-S-003">
       <span class="requirement_child-uid">CGW-S-003</span>
-      Physical Mode Switch Interlock
+      Mode Switch Interlock
     </a>
   </li>
   </ul>
@@ -452,14 +453,12 @@ data-level="2.1"
     <h3
 class="section-title"
 data-level="2.12.3"
->Physical Mode Switch Interlock
+>Mode Switch Interlock
 </h3>
     <dl class="requirement_meta">
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-003</dd>
-    
-
     
   </dl>
     
@@ -478,7 +477,7 @@ data-level="2.12.3"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL have a physical switch to switch into modes which allow OTA, spoofing, etc. from d1 to d2.</p>
+<p>The device SHALL satisfy one or more of these requirements to enable a switch into modes which allow OTA, spoofing, etc. from d1 to d2. If more than one is satisfied then the effects of either switch could be in effect concurrently (i.e. a logical OR operation).</p>
 </div>
 
   </div>
@@ -515,8 +514,6 @@ data-level="2.2"
     <dt><i>UID</i></dt>
     <dd>AGW-S-002</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -534,7 +531,7 @@ data-level="2.2"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL prevent Denial of Service (DoS) on d1 and furthermore prevent DoS of the bidirectional d1&lt;-&gt;d2 operation.</p>
+<p>The device SHALL prevent generating Denial of Service (DoS) on d2 from messages originating on d1.</p>
 </div>
 
   </div>
@@ -567,8 +564,6 @@ data-level="2.12.11"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-100</dd>
-    
-
     
   </dl>
     
@@ -624,8 +619,6 @@ data-level="2.3"
     <dt><i>UID</i></dt>
     <dd>AGW-S-003</dd>
     
-
-    
   </dl>
     
     
@@ -670,8 +663,6 @@ data-level="2.4"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-004</dd>
-    
-
     
   </dl>
     
@@ -723,8 +714,6 @@ data-level="2.12.2"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-002</dd>
-    
-
     
   </dl>
     
@@ -780,8 +769,6 @@ data-level="2.5"
     <dt><i>UID</i></dt>
     <dd>AGW-S-005</dd>
     
-
-    
   </dl>
     
     
@@ -827,8 +814,6 @@ data-level="2.6"
     <dt><i>UID</i></dt>
     <dd>AGW-S-006</dd>
     
-
-    
   </dl>
     
     
@@ -873,8 +858,6 @@ data-level="2.7"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-007</dd>
-    
-
     
   </dl>
     
@@ -932,8 +915,6 @@ data-level="2.9"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-009</dd>
-    
-
     
   </dl>
     
@@ -993,8 +974,6 @@ data-level="2.12.1"
     <dt><i>UID</i></dt>
     <dd>CGW-S-001</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -1047,8 +1026,6 @@ data-level="2.12.5"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-005</dd>
-    
-
     
   </dl>
     
@@ -1132,8 +1109,6 @@ data-level="2.12.6"
     <dt><i>UID</i></dt>
     <dd>CGW-S-006</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -1151,7 +1126,7 @@ data-level="2.12.6"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL NOT drop CAN frames in its bidirectional d1&lt;-&gt;d2 operation.</p>
+<p>The device SHALL NOT drop CAN frames in its bidirectional d1&lt;-&gt;d2 operation, unless with explicit configuration for rate limiting (AGW-F-006) or translation (AGW-F-002)</p>
 </div>
 
   </div>
@@ -1184,8 +1159,6 @@ data-level="2.12.7"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-007</dd>
-    
-
     
   </dl>
     
@@ -1238,8 +1211,6 @@ data-level="2.12.8"
     <dt><i>UID</i></dt>
     <dd>CGW-S-008</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -1291,8 +1262,6 @@ data-level="2.12.9"
     <dt><i>UID</i></dt>
     <dd>CGW-S-009</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -1343,8 +1312,6 @@ data-level="2.12.10"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-010</dd>
-    
-
     
   </dl>
     
@@ -1404,8 +1371,6 @@ data-level="3.2.1"
     <dt><i>UID</i></dt>
     <dd>NGW-F-001</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -1462,8 +1427,6 @@ data-level="2.8"
     <dt><i>UID</i></dt>
     <dd>AGW-S-008</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -1518,8 +1481,6 @@ data-level="2.7"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-007</dd>
-    
-
     
   </dl>
     
@@ -1576,8 +1537,6 @@ data-level="2.9"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-009</dd>
-    
-
     
   </dl>
     
@@ -1638,8 +1597,6 @@ data-level="2.12.1"
     <dt><i>UID</i></dt>
     <dd>CGW-S-001</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -1694,8 +1651,6 @@ data-level="2.10"
     <dt><i>UID</i></dt>
     <dd>AGW-S-010</dd>
     
-
-    
   </dl>
     
     
@@ -1740,8 +1695,6 @@ data-level="2.11"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-011</dd>
-    
-
     
   </dl>
     
@@ -1816,8 +1769,6 @@ data-level="2.9"
     <dt><i>UID</i></dt>
     <dd>AGW-S-009</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -1875,8 +1826,6 @@ data-level="2.7"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-007</dd>
-    
-
     
   </dl>
     
@@ -1936,8 +1885,6 @@ data-level="2.12.1"
     <dt><i>UID</i></dt>
     <dd>CGW-S-001</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -1993,8 +1940,6 @@ data-level="2.4"
     <dt><i>UID</i></dt>
     <dd>AGW-S-004</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -2044,8 +1989,6 @@ data-level="2.12.2"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-002</dd>
-    
-
     
   </dl>
     
@@ -2102,15 +2045,13 @@ data-level="2.1"
     <dt><i>UID</i></dt>
     <dd>AGW-S-001</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
   <li>
     <a class="requirement_link-child" href="#2.12.3-CGW-S-003">
       <span class="requirement_child-uid">CGW-S-003</span>
-      Physical Mode Switch Interlock
+      Mode Switch Interlock
     </a>
   </li>
   </ul>
@@ -2147,14 +2088,12 @@ data-level="2.1"
     <h3
 class="section-title"
 data-level="2.12.3"
->Physical Mode Switch Interlock
+>Mode Switch Interlock
 </h3>
     <dl class="requirement_meta">
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-003</dd>
-    
-
     
   </dl>
     
@@ -2173,7 +2112,7 @@ data-level="2.12.3"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL have a physical switch to switch into modes which allow OTA, spoofing, etc. from d1 to d2.</p>
+<p>The device SHALL satisfy one or more of these requirements to enable a switch into modes which allow OTA, spoofing, etc. from d1 to d2. If more than one is satisfied then the effects of either switch could be in effect concurrently (i.e. a logical OR operation).</p>
 </div>
 
   </div>
@@ -2183,6 +2122,115 @@ data-level="2.12.3"
 
     
     
+
+  </section>
+
+</article></div>
+
+          <div class="content_item" data-role="children">
+</div>
+        </section>
+        <section class="content_section">
+          <div class="content_item" data-role="parents">
+</div>
+          <div class="content_item" data-role="current"><article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    <div data-role='anchor' id="2.12.3.1-CGW-S-003A"></div>
+    <h4
+class="section-title"
+data-level="2.12.3.1"
+>Physical Mode Switch Interlock
+</h4>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>CGW-S-003A</dd>
+    
+  </dl>
+    
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL have at least on physical input that when grounded enables a switch into modes which allow OTA, spoofing, etc. from d1 to d2.</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+    <div class="requirement_comment">
+      <div class="document">
+<p>Example:</p>
+<ol class="upperalpha simple">
+<li>Phsyical switch on dash</li>
+</ol>
+</div>
+
+    </div>
+
+  </section>
+
+</article></div>
+
+          <div class="content_item" data-role="children">
+</div>
+        </section>
+        <section class="content_section">
+          <div class="content_item" data-role="parents">
+</div>
+          <div class="content_item" data-role="current"><article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    <div data-role='anchor' id="2.12.3.2-CGW-S-003B"></div>
+    <h4
+class="section-title"
+data-level="2.12.3.2"
+>Virtual Mode Switch Interlock
+</h4>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>CGW-S-003B</dd>
+    
+  </dl>
+    
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL allow an authenticated input over a connection to enable a switch into modes which allow OTA, spoofing, etc. from d1 to d2.</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+    <div class="requirement_comment">
+      <div class="document">
+<p>Examples:</p>
+<ol class="upperalpha simple">
+<li>Consent on Instrument cluster or infotainment device (and thus internal networks - possibly but not necessarily d2)</li>
+<li>Consent from third party device / application that is signed with infrastructure OEM has access to verify</li>
+</ol>
+</div>
+
+    </div>
 
   </section>
 
@@ -2208,8 +2256,6 @@ data-level="2.12.4"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-004</dd>
-    
-
     
   </dl>
     
@@ -2257,8 +2303,6 @@ data-level="2.7"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-007</dd>
-    
-
     
   </dl>
     
@@ -2315,8 +2359,6 @@ data-level="2.12.5"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-005</dd>
-    
-
     
   </dl>
     
@@ -2401,8 +2443,6 @@ data-level="2.12.6"
     <dt><i>UID</i></dt>
     <dd>CGW-S-006</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -2420,7 +2460,7 @@ data-level="2.12.6"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL NOT drop CAN frames in its bidirectional d1&lt;-&gt;d2 operation.</p>
+<p>The device SHALL NOT drop CAN frames in its bidirectional d1&lt;-&gt;d2 operation, unless with explicit configuration for rate limiting (AGW-F-006) or translation (AGW-F-002)</p>
 </div>
 
   </div>
@@ -2453,8 +2493,6 @@ data-level="2.12.7"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-007</dd>
-    
-
     
   </dl>
     
@@ -2507,8 +2545,6 @@ data-level="2.12.8"
     <dt><i>UID</i></dt>
     <dd>CGW-S-008</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -2560,8 +2596,6 @@ data-level="2.12.9"
     <dt><i>UID</i></dt>
     <dd>CGW-S-009</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -2612,8 +2646,6 @@ data-level="2.12.10"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-010</dd>
-    
-
     
   </dl>
     
@@ -2670,8 +2702,6 @@ data-level="2.12.5"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-005</dd>
-    
-
     
   </dl>
     
@@ -2754,8 +2784,6 @@ data-level="2.7"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-007</dd>
-    
-
     
   </dl>
     
@@ -2815,8 +2843,6 @@ data-level="2.12.6"
     <dt><i>UID</i></dt>
     <dd>CGW-S-006</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -2834,7 +2860,7 @@ data-level="2.12.6"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL NOT drop CAN frames in its bidirectional d1&lt;-&gt;d2 operation.</p>
+<p>The device SHALL NOT drop CAN frames in its bidirectional d1&lt;-&gt;d2 operation, unless with explicit configuration for rate limiting (AGW-F-006) or translation (AGW-F-002)</p>
 </div>
 
   </div>
@@ -2871,8 +2897,6 @@ data-level="2.12.5"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-005</dd>
-    
-
     
   </dl>
     
@@ -2955,8 +2979,6 @@ data-level="2.7"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-007</dd>
-    
-
     
   </dl>
     
@@ -3016,8 +3038,6 @@ data-level="2.12.7"
     <dt><i>UID</i></dt>
     <dd>CGW-S-007</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -3072,8 +3092,6 @@ data-level="2.12.5"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-005</dd>
-    
-
     
   </dl>
     
@@ -3156,8 +3174,6 @@ data-level="2.7"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-007</dd>
-    
-
     
   </dl>
     
@@ -3217,8 +3233,6 @@ data-level="2.12.8"
     <dt><i>UID</i></dt>
     <dd>CGW-S-008</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -3273,8 +3287,6 @@ data-level="2.12.5"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-005</dd>
-    
-
     
   </dl>
     
@@ -3357,8 +3369,6 @@ data-level="2.7"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-007</dd>
-    
-
     
   </dl>
     
@@ -3418,8 +3428,6 @@ data-level="2.12.9"
     <dt><i>UID</i></dt>
     <dd>CGW-S-009</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -3474,8 +3482,6 @@ data-level="2.12.5"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-005</dd>
-    
-
     
   </dl>
     
@@ -3559,8 +3565,6 @@ data-level="2.7"
     <dt><i>UID</i></dt>
     <dd>AGW-S-007</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -3619,8 +3623,6 @@ data-level="2.12.10"
     <dt><i>UID</i></dt>
     <dd>CGW-S-010</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -3676,8 +3678,6 @@ data-level="2.2"
     <dt><i>UID</i></dt>
     <dd>AGW-S-002</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -3695,7 +3695,7 @@ data-level="2.2"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL prevent Denial of Service (DoS) on d1 and furthermore prevent DoS of the bidirectional d1&lt;-&gt;d2 operation.</p>
+<p>The device SHALL prevent generating Denial of Service (DoS) on d2 from messages originating on d1.</p>
 </div>
 
   </div>
@@ -3727,8 +3727,6 @@ data-level="2.12.11"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-100</dd>
-    
-
     
   </dl>
     
@@ -3834,8 +3832,6 @@ data-level="3.1.1"
     <dt><i>UID</i></dt>
     <dd>AGW-F-001</dd>
     
-
-    
   </dl>
     
     
@@ -3881,8 +3877,6 @@ data-level="3.1.2"
     <dt><i>UID</i></dt>
     <dd>AGW-F-002</dd>
     
-
-    
   </dl>
     
     
@@ -3927,8 +3921,6 @@ data-level="3.1.3"
     
     <dt><i>UID</i></dt>
     <dd>AGW-F-003</dd>
-    
-
     
   </dl>
     
@@ -3980,8 +3972,6 @@ data-level="3.1.6"
     
     <dt><i>UID</i></dt>
     <dd>AGW-F-006</dd>
-    
-
     
   </dl>
     
@@ -4037,8 +4027,6 @@ data-level="3.1.4"
     <dt><i>UID</i></dt>
     <dd>AGW-F-004</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -4089,8 +4077,6 @@ data-level="3.1.5"
     
     <dt><i>UID</i></dt>
     <dd>AGW-F-005</dd>
-    
-
     
   </dl>
     
@@ -4148,8 +4134,6 @@ data-level="3.1.4"
     <dt><i>UID</i></dt>
     <dd>AGW-F-004</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -4199,8 +4183,6 @@ data-level="3.1.5"
     
     <dt><i>UID</i></dt>
     <dd>AGW-F-005</dd>
-    
-
     
   </dl>
     
@@ -4257,8 +4239,6 @@ data-level="3.1.3"
     <dt><i>UID</i></dt>
     <dd>AGW-F-003</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -4308,8 +4288,6 @@ data-level="3.1.6"
     
     <dt><i>UID</i></dt>
     <dd>AGW-F-006</dd>
-    
-
     
   </dl>
     
@@ -4364,8 +4342,6 @@ data-level="3.1.7"
     <dt><i>UID</i></dt>
     <dd>AGW-F-007</dd>
     
-
-    
   </dl>
     
     
@@ -4410,8 +4386,6 @@ data-level="3.1.8"
     
     <dt><i>UID</i></dt>
     <dd>AGW-F-008</dd>
-    
-
     
   </dl>
     
@@ -4458,8 +4432,6 @@ data-level="3.1.9"
     <dt><i>UID</i></dt>
     <dd>AGW-F-009</dd>
     
-
-    
   </dl>
     
     
@@ -4504,8 +4476,6 @@ data-level="3.1.10"
     
     <dt><i>UID</i></dt>
     <dd>AGW-F-010</dd>
-    
-
     
   </dl>
     
@@ -4573,8 +4543,6 @@ data-level="3.2.1"
     <dt><i>UID</i></dt>
     <dd>NGW-F-001</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -4632,8 +4600,6 @@ data-level="1.1"
     <dt><i>UID</i></dt>
     <dd>NGW-S-001</dd>
     
-
-    
   </dl>
     
 <ul class="requirement_link">
@@ -4684,8 +4650,6 @@ data-level="2.8"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-008</dd>
-    
-
     
   </dl>
     
