@@ -69,14 +69,7 @@
         </a></li><li><a href="#2.5-AGW-S-004">
           <span class="section-number">2.5</span>
           Prevents Exfiltration
-        </a><ul><li><a href="#2.5.1-AGW-S-004A">
-          <span class="section-number">2.5.1</span>
-          Protect Confidentiality
-        </a></li><li><a href="#2.5.2-AGW-S-004B">
-          <span class="section-number">2.5.2</span>
-          Re-Write / Masking
-        </a></li></ul>
-            </li><li><a href="#2.6-AGW-S-005">
+        </a></li><li><a href="#2.6-AGW-S-005">
           <span class="section-number">2.6</span>
           Prevents Elevation
         </a></li><li><a href="#2.7-AGW-S-006">
@@ -94,14 +87,7 @@
         </a></li><li><a href="#2.11-AGW-S-010">
           <span class="section-number">2.11</span>
           Mode Switch Interlock
-        </a><ul><li><a href="#2.11.1-AGW-S-010A">
-          <span class="section-number">2.11.1</span>
-          Physical Mode Switch Interlock
-        </a></li><li><a href="#2.11.2-AGW-S-010B">
-          <span class="section-number">2.11.2</span>
-          Virtual Mode Switch Interlock
-        </a></li></ul>
-            </li><li><a href="#2.12-AGW-S-011">
+        </a></li><li><a href="#2.12-AGW-S-011">
           <span class="section-number">2.12</span>
           Mode Switch Indicated
         </a></li><li><a href="#2.13-Security-Requirements-for-CAN-Gateways">
@@ -113,23 +99,24 @@
         </a></li><li><a href="#2.13.2-CGW-S-005">
           <span class="section-number">2.13.2</span>
           Preserves Atomic Multicast
-        </a></li><li><a href="#2.13.3-CGW-S-006">
-          <span class="section-number">2.13.3</span>
+        </a><ul><li><a href="#2.13.2.1-CGW-S-005a">
+          <span class="section-number">2.13.2.1</span>
           Won't Drop Frames
-        </a></li><li><a href="#2.13.4-CGW-S-007">
-          <span class="section-number">2.13.4</span>
+        </a></li><li><a href="#2.13.2.2-CGW-S-005b">
+          <span class="section-number">2.13.2.2</span>
           No Priority Inversion
-        </a></li><li><a href="#2.13.5-CGW-S-008">
-          <span class="section-number">2.13.5</span>
+        </a></li><li><a href="#2.13.2.3-CGW-S-005c">
+          <span class="section-number">2.13.2.3</span>
           Preserves Ordering
-        </a></li><li><a href="#2.13.6-CGW-S-009">
-          <span class="section-number">2.13.6</span>
+        </a></li><li><a href="#2.13.2.4-CGW-S-005d">
+          <span class="section-number">2.13.2.4</span>
           FIFO but Also Priority
-        </a></li><li><a href="#2.13.7-CGW-S-010">
-          <span class="section-number">2.13.7</span>
+        </a></li><li><a href="#2.13.2.5-CGW-S-005e">
+          <span class="section-number">2.13.2.5</span>
           Preserves Jitter
-        </a></li><li><a href="#2.13.8-CGW-S-100">
-          <span class="section-number">2.13.8</span>
+        </a></li></ul>
+            </li><li><a href="#2.13.3-CGW-S-100">
+          <span class="section-number">2.13.3</span>
           Impervious to Address Claim Attacks
         </a></li></ul>
             </li></ul>
@@ -413,7 +400,7 @@ data-level="2.3"
     
 <ul class="requirement_link">
   <li>
-    <a class="requirement_link-child" href="#2.13.8-CGW-S-100">
+    <a class="requirement_link-child" href="#2.13.3-CGW-S-100">
       <span class="requirement_child-uid">CGW-S-100</span>
       Impervious to Address Claim Attacks
     </a>
@@ -500,81 +487,11 @@ data-level="2.5"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL prevent exfiltration of data from <em>TND</em> to <em>UND</em>, or vice-versa, by satisfying one or more of these requirements.</p>
-</div>
-
-  </div>
-
-  </section>
-  <section class="requirement_section" data-section='comment'>
-
-    
-    
-
-  </section>
-
-</article><article class="requirement">
-
-  <section class="requirement_section" data-section='meta'>
-
-    <div data-role='anchor' id="2.5.1-AGW-S-004A"></div>
-    <h3
-class="section-title"
-data-level="2.5.1"
->Protect Confidentiality
-</h3>
-    <dl class="requirement_meta">
-    
-    <dt><i>UID</i></dt>
-    <dd>AGW-S-004A</dd>
-    
-  </dl>
-    
-    
-
-  </section>
-  <section class="requirement_section" data-section='statement'>
-
-    <div class="requirement_statement">
-    <div class="document">
-<p>These devices MAY encapsulate and/or translate (e.g. encrypt) information as it is transported between the network domains for the purposes of protecting confidentiality of the information in the domain to which the information is moved.</p>
-</div>
-
-  </div>
-
-  </section>
-  <section class="requirement_section" data-section='comment'>
-
-    
-    
-
-  </section>
-
-</article><article class="requirement">
-
-  <section class="requirement_section" data-section='meta'>
-
-    <div data-role='anchor' id="2.5.2-AGW-S-004B"></div>
-    <h3
-class="section-title"
-data-level="2.5.2"
->Re-Write / Masking
-</h3>
-    <dl class="requirement_meta">
-    
-    <dt><i>UID</i></dt>
-    <dd>AGW-S-004B</dd>
-    
-  </dl>
-    
-    
-
-  </section>
-  <section class="requirement_section" data-section='statement'>
-
-    <div class="requirement_statement">
-    <div class="document">
-<p>The device SHALL provide a means of masking or otherwise re-writing data to prevent exfiltration of sensitive information from <em>TND</em> to <em>UND</em>.</p>
+<p>The device SHALL prevent exfiltration of data from <em>TND</em> to <em>UND</em>, or vice-versa, by satisfying one or more of these methods:</p>
+<ul class="simple">
+<li>Protect Confidentiality: These devices MAY encapsulate and/or translate (e.g. encrypt) information as it is transported between the network domains for the purposes of protecting confidentiality of the information in the domain to which the information is moved.</li>
+<li>Re-Write / Masking: The device SHALL provide a means of masking or otherwise re-writing data to prevent exfiltration of sensitive information from <em>TND</em> to <em>UND</em>.</li>
+</ul>
 </div>
 
   </div>
@@ -826,7 +743,18 @@ data-level="2.11"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL have a means to temporarily disable the preventions listed previously and as noted with &quot;unless with explicity authorized and authenticated configuration changes via the mode switch&quot; The means must be impossible to use without explicit authorization by the vehicle owner. The device SHALL satisfy one or more of these requirements to enable a switch into modes which allow OTA, spoofing, etc. from <em>UND</em> to <em>TND</em>. If more than one is satisfied then the effects of either switch could be in effect concurrently (i.e. a logical OR operation).</p>
+<p>The device SHALL have a means to temporarily disable the preventions listed previously and as noted with &quot;unless with explicity authorized and authenticated configuration changes via the mode switch&quot; The means must be impossible to use without explicit authorization by the vehicle owner. The device SHALL satisfy one or more of these methods to enable a switch into modes which allow OTA, spoofing, etc. from <em>UND</em> to <em>TND</em>. If more than one is satisfied then the effects of either switch could be in effect concurrently (i.e. a logical OR operation).</p>
+<ul class="simple">
+<li>Physical Mode Switch Interlock: The device SHALL have at least on physical input that when grounded enables a switch into modes which allow OTA, spoofing, etc. from <em>UND</em> to <em>TND</em>.<ul>
+<li>Example: Physical switch on dash</li>
+</ul>
+</li>
+<li>Virtual Mode Switch Interlock: The device SHALL allow a explicitly authorized and authenticated input over a connection to enable a switch into modes which allow OTA, spoofing, etc. from <em>UND</em> to <em>TND</em>.<ul>
+<li>Example: Consent on Instrument cluster or infotainment device (and thus internal networks - possibly but not necessarily <em>TND</em>)</li>
+<li>Example: Consent from third party device / application that is signed with infrastructure OEM has access to verify</li>
+</ul>
+</li>
+</ul>
 </div>
 
   </div>
@@ -836,99 +764,6 @@ data-level="2.11"
 
     
     
-
-  </section>
-
-</article><article class="requirement">
-
-  <section class="requirement_section" data-section='meta'>
-
-    <div data-role='anchor' id="2.11.1-AGW-S-010A"></div>
-    <h3
-class="section-title"
-data-level="2.11.1"
->Physical Mode Switch Interlock
-</h3>
-    <dl class="requirement_meta">
-    
-    <dt><i>UID</i></dt>
-    <dd>AGW-S-010A</dd>
-    
-  </dl>
-    
-    
-
-  </section>
-  <section class="requirement_section" data-section='statement'>
-
-    <div class="requirement_statement">
-    <div class="document">
-<p>The device SHALL have at least on physical input that when grounded enables a switch into modes which allow OTA, spoofing, etc. from <em>UND</em> to <em>TND</em>.</p>
-</div>
-
-  </div>
-
-  </section>
-  <section class="requirement_section" data-section='comment'>
-
-    
-    
-    <div class="requirement_comment">
-      <div class="document">
-<p>Example:</p>
-<ol class="upperalpha simple">
-<li>Phsyical switch on dash</li>
-</ol>
-</div>
-
-    </div>
-
-  </section>
-
-</article><article class="requirement">
-
-  <section class="requirement_section" data-section='meta'>
-
-    <div data-role='anchor' id="2.11.2-AGW-S-010B"></div>
-    <h3
-class="section-title"
-data-level="2.11.2"
->Virtual Mode Switch Interlock
-</h3>
-    <dl class="requirement_meta">
-    
-    <dt><i>UID</i></dt>
-    <dd>AGW-S-010B</dd>
-    
-  </dl>
-    
-    
-
-  </section>
-  <section class="requirement_section" data-section='statement'>
-
-    <div class="requirement_statement">
-    <div class="document">
-<p>The device SHALL allow a explicitly authorized and authenticated input over a connection to enable a switch into modes which allow OTA, spoofing, etc. from <em>UND</em> to <em>TND</em>.</p>
-</div>
-
-  </div>
-
-  </section>
-  <section class="requirement_section" data-section='comment'>
-
-    
-    
-    <div class="requirement_comment">
-      <div class="document">
-<p>Examples:</p>
-<ol class="upperalpha simple">
-<li>Consent on Instrument cluster or infotainment device (and thus internal networks - possibly but not necessarily <em>TND</em>)</li>
-<li>Consent from third party device / application that is signed with infrastructure OEM has access to verify</li>
-</ol>
-</div>
-
-    </div>
 
   </section>
 
@@ -1062,38 +897,6 @@ data-level="2.13.2"
     </a>
   </li>
   </ul>
-<ul class="requirement_link">
-  <li>
-    <a class="requirement_link-child" href="#2.13.3-CGW-S-006">
-      <span class="requirement_child-uid">CGW-S-006</span>
-      Won't Drop Frames
-    </a>
-  </li>
-  <li>
-    <a class="requirement_link-child" href="#2.13.4-CGW-S-007">
-      <span class="requirement_child-uid">CGW-S-007</span>
-      No Priority Inversion
-    </a>
-  </li>
-  <li>
-    <a class="requirement_link-child" href="#2.13.5-CGW-S-008">
-      <span class="requirement_child-uid">CGW-S-008</span>
-      Preserves Ordering
-    </a>
-  </li>
-  <li>
-    <a class="requirement_link-child" href="#2.13.6-CGW-S-009">
-      <span class="requirement_child-uid">CGW-S-009</span>
-      FIFO but Also Priority
-    </a>
-  </li>
-  <li>
-    <a class="requirement_link-child" href="#2.13.7-CGW-S-010">
-      <span class="requirement_child-uid">CGW-S-010</span>
-      Preserves Jitter
-    </a>
-  </li>
-  </ul>
     
 
   </section>
@@ -1118,27 +921,19 @@ data-level="2.13.2"
 
   <section class="requirement_section" data-section='meta'>
 
-    <div data-role='anchor' id="2.13.3-CGW-S-006"></div>
-    <h3
+    <div data-role='anchor' id="2.13.2.1-CGW-S-005a"></div>
+    <h4
 class="section-title"
-data-level="2.13.3"
+data-level="2.13.2.1"
 >Won't Drop Frames
-</h3>
+</h4>
     <dl class="requirement_meta">
     
     <dt><i>UID</i></dt>
-    <dd>CGW-S-006</dd>
+    <dd>CGW-S-005a</dd>
     
   </dl>
     
-<ul class="requirement_link">
-  <li>
-    <a class="requirement_link-parent" href="#2.13.2-CGW-S-005">
-      <span class="requirement_parent-uid">CGW-S-005</span>
-      Preserves Atomic Multicast
-    </a>
-  </li>
-  </ul>
     
 
   </section>
@@ -1163,27 +958,19 @@ data-level="2.13.3"
 
   <section class="requirement_section" data-section='meta'>
 
-    <div data-role='anchor' id="2.13.4-CGW-S-007"></div>
-    <h3
+    <div data-role='anchor' id="2.13.2.2-CGW-S-005b"></div>
+    <h4
 class="section-title"
-data-level="2.13.4"
+data-level="2.13.2.2"
 >No Priority Inversion
-</h3>
+</h4>
     <dl class="requirement_meta">
     
     <dt><i>UID</i></dt>
-    <dd>CGW-S-007</dd>
+    <dd>CGW-S-005b</dd>
     
   </dl>
     
-<ul class="requirement_link">
-  <li>
-    <a class="requirement_link-parent" href="#2.13.2-CGW-S-005">
-      <span class="requirement_parent-uid">CGW-S-005</span>
-      Preserves Atomic Multicast
-    </a>
-  </li>
-  </ul>
     
 
   </section>
@@ -1208,27 +995,19 @@ data-level="2.13.4"
 
   <section class="requirement_section" data-section='meta'>
 
-    <div data-role='anchor' id="2.13.5-CGW-S-008"></div>
-    <h3
+    <div data-role='anchor' id="2.13.2.3-CGW-S-005c"></div>
+    <h4
 class="section-title"
-data-level="2.13.5"
+data-level="2.13.2.3"
 >Preserves Ordering
-</h3>
+</h4>
     <dl class="requirement_meta">
     
     <dt><i>UID</i></dt>
-    <dd>CGW-S-008</dd>
+    <dd>CGW-S-005c</dd>
     
   </dl>
     
-<ul class="requirement_link">
-  <li>
-    <a class="requirement_link-parent" href="#2.13.2-CGW-S-005">
-      <span class="requirement_parent-uid">CGW-S-005</span>
-      Preserves Atomic Multicast
-    </a>
-  </li>
-  </ul>
     
 
   </section>
@@ -1253,27 +1032,19 @@ data-level="2.13.5"
 
   <section class="requirement_section" data-section='meta'>
 
-    <div data-role='anchor' id="2.13.6-CGW-S-009"></div>
-    <h3
+    <div data-role='anchor' id="2.13.2.4-CGW-S-005d"></div>
+    <h4
 class="section-title"
-data-level="2.13.6"
+data-level="2.13.2.4"
 >FIFO but Also Priority
-</h3>
+</h4>
     <dl class="requirement_meta">
     
     <dt><i>UID</i></dt>
-    <dd>CGW-S-009</dd>
+    <dd>CGW-S-005d</dd>
     
   </dl>
     
-<ul class="requirement_link">
-  <li>
-    <a class="requirement_link-parent" href="#2.13.2-CGW-S-005">
-      <span class="requirement_parent-uid">CGW-S-005</span>
-      Preserves Atomic Multicast
-    </a>
-  </li>
-  </ul>
     
 
   </section>
@@ -1298,27 +1069,19 @@ data-level="2.13.6"
 
   <section class="requirement_section" data-section='meta'>
 
-    <div data-role='anchor' id="2.13.7-CGW-S-010"></div>
-    <h3
+    <div data-role='anchor' id="2.13.2.5-CGW-S-005e"></div>
+    <h4
 class="section-title"
-data-level="2.13.7"
+data-level="2.13.2.5"
 >Preserves Jitter
-</h3>
+</h4>
     <dl class="requirement_meta">
     
     <dt><i>UID</i></dt>
-    <dd>CGW-S-010</dd>
+    <dd>CGW-S-005e</dd>
     
   </dl>
     
-<ul class="requirement_link">
-  <li>
-    <a class="requirement_link-parent" href="#2.13.2-CGW-S-005">
-      <span class="requirement_parent-uid">CGW-S-005</span>
-      Preserves Atomic Multicast
-    </a>
-  </li>
-  </ul>
     
 
   </section>
@@ -1343,10 +1106,10 @@ data-level="2.13.7"
 
   <section class="requirement_section" data-section='meta'>
 
-    <div data-role='anchor' id="2.13.8-CGW-S-100"></div>
+    <div data-role='anchor' id="2.13.3-CGW-S-100"></div>
     <h3
 class="section-title"
-data-level="2.13.8"
+data-level="2.13.3"
 >Impervious to Address Claim Attacks
 </h3>
     <dl class="requirement_meta">
