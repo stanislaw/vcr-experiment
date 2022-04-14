@@ -370,6 +370,43 @@ data-level="2"
   <section data-section="description" class="docsection_section"><div class="free-text">
       <div class="document">
 <p>The group discussed what security requirements would need to be satisfied by a device intended to be a gateway: a device which is intended to move/translate etc (see section <em>Devices Intended to be a Gateway</em>) information from an Untrusted Network Domain (<em>UND</em>) to a Trusted Network Domain (<em>TND</em>).</p>
+<dl class="docutils">
+<dt>Untrusted Network Domain (<em>UND</em>)</dt>
+<dd><p class="first">A <em>UND</em> is a network domain (or segment) that contains <strong>*any*</strong> of the following:</p>
+<ol class="last loweralpha simple">
+<li>wireless communication or reachable wirelessly (e.g J2497)</li>
+<li>an interface for aftermarket devices or operator access (e.g. an OBD port)</li>
+<li>a telematics device that does not satisfy the HD VCR requirements</li>
+<li>a multi-network device (e.g. intended or unintended gateway) that does not satisfy the HD VCR requirements</li>
+</ol>
+</dd>
+<dt>Trusted Network Domain (<em>TND</em>)</dt>
+<dd><p class="first">A <em>TND</em> is a network domain (or segment) that <strong>*does not contain any*</strong> of the following:</p>
+<ol class="last loweralpha simple">
+<li>wireless communication or reachable wirelessly (e.g J2497)</li>
+<li>an interface for aftermarket devices or operator access (e.g. an OBD port)</li>
+<li>a telematics device that does not satisfy the HD VCR requirements</li>
+<li>a multi-network device (e.g. intended or unintended gateway) that does not satisfy the HD VCR requirements</li>
+</ol>
+</dd>
+</dl>
+<p>Some Examples:</p>
+<p>The RP1226 connector is made for connecting aftermarket devices; therefore the databuses there are UNDs.</p>
+<pre class="literal-block">
+        ┌───────────────┐                 ┌──────────────┐                     ┌─┐
+        │  Gateway sat  │                 │              │                     │┼│
+────────┤   all HDVCR   ├─────────────────┤    RP1226    ├─────────────────────┼┼│
+  TND   │  requirements │     UND         │   Connector  │      UND            │┼│
+        └───────────────┘                 └──────────────┘                     └─┘
+</pre>
+<p>The OBD connector is _the_ operator access port; therefore the databuses there are UNDs.</p>
+<pre class="literal-block">
+        ┌───────────────┐                 ┌──────────────┐                     ┌─┐
+        │  Gateway sat  │                 │              │                     │┼│
+────────┤   all HDVCR   ├─────────────────┤      OBD     ├─────────────────────┼┼│
+  TND   │  requirements │     UND         │   Connector  │      UND            │┼│
+        └───────────────┘                 └──────────────┘                     └─┘
+</pre>
 </div>
 
     </div></section>
