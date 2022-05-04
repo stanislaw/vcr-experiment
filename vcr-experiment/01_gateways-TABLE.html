@@ -208,7 +208,11 @@
     <main class="layout_main">
       
 
-      
+      <div class="tags">
+  <span class="tag">
+    CONTAINS_OPTIONS<span class="tag_badge">2</span>
+  </span>
+</div>
 
       <div class="content"><section data-col="0"><div class="free-text">
             <div class="document">
@@ -216,6 +220,7 @@
 <p>The collection of requirements captured here in <tt class="docutils literal">strictdoc</tt> form were developed in a breakout session at the NMFTA CTSRP November 2021 workshop. The breakout session group discussed a) the workable definition of a gateway device -- focusing especially on the attacker's perspective -- b) possible security requirements for those devices that are gateways (intentional or not) and c) attempted to tie those back to the security requirements for vehicle gateways which were outline by a vehicle network security expert whose presentation on the subject was delivered earlier that day. The workshop participants and the expert cannot be revealed here, except by their own actions since the workshop was held -- as is tradition -- under Chatham house rules.</p>
 <p>The reason why gateway devices were considered is because the previous work of the RFPCTL working group focused on telematics devices (ultimately releasing the TSRM) and the next most relevant device from a security point of view are devices that enable pivoting/lateral-movement in attacks: gateways. Indeed, the interim result of the VCRWG is that there are multiple likely present devices in modern heavy duty vehicle which are gateway devices.</p>
 <p>This experimental capture of the requirements as <tt class="docutils literal">strictdoc</tt> <tt class="docutils literal">STATEMENT</tt> blocks was performed because the completion of the work by the RFPCTL working group yielded a large number of requirements that need to be periodically updated, refined, reviewed etc. And furthermore the requirements need to be processed on each release to produce printable references and questionnaires for use by the fleets in the procurement processes. We expect that by the completion of the work by the VCRWG that there will be even more requirements to manage in ongoing releases and to produce more products such as in the TSRM. It is clear that machine readable form for specifying the requirements is necessary. An alternative considered was <cite>doorstop</cite> but the multi-file approach of doorstop was estimated to cause more friction in development and review of the requirements by the VCRWG.</p>
+<p>This document contains requirements where the working group cannot reasonably require a particular implementation option, only that one of the satisfactory ways to satisfy the requirement is implemented. Modelling these 'options' requirements is not possible nor reccomended: the sheer number of requirements which will be captured for heavy vehicles means that the requirements must remain machine readable and there is no machine readable way to communicate options to implementors (for good reason). The approach that is taken is to a) include the options as notes to the implementers of these requirements and b) to tag all requirements with <cite>CONTAINS_OPTIONS</cite> so the entire list of requirements containing notes to the implementers can be indexed for easy reference by them.</p>
 </div>
 
           </div></section>
@@ -525,6 +530,9 @@ data-level="2.5"
     <dt><i>UID</i></dt>
     <dd>AGW-S-004</dd>
     
+    <dt><i>TAGS</i></dt>
+    <dd>CONTAINS_OPTIONS</dd>
+    
   </dl>
     
     
@@ -786,6 +794,9 @@ data-level="2.11"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-010</dd>
+    
+    <dt><i>TAGS</i></dt>
+    <dd>CONTAINS_OPTIONS</dd>
     
   </dl>
     
