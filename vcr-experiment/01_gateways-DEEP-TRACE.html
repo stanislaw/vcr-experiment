@@ -95,10 +95,10 @@
             </a><ul><li><a href="#1.13.1-CGW-S-001">
           <span class="section-number">1.13.1</span>
           Performant
-        </a></li><li><a href="#1.13.2-CGW-S-005">
-          <span class="section-number">1.13.2</span>
-          Preserves Atomic Multicast
-        </a><ul><li><a href="#1.13.2.1-CGW-S-005a">
+        </a></li><li><a href="#1.13.2-Preserves-Atomic-Multicast-CGW-S-005-Series">
+              <span class="section-number">1.13.2</span>
+              Preserves Atomic Multicast: CGW-S-005* Series
+            </a><ul><li><a href="#1.13.2.1-CGW-S-005a">
           <span class="section-number">1.13.2.1</span>
           Won't Drop Frames
         </a></li><li><a href="#1.13.2.2-CGW-S-005b">
@@ -154,13 +154,13 @@
         </a></li><li><a href="#3.1.2-AGW-F-002">
           <span class="section-number">3.1.2</span>
           Translates
-        </a></li><li><a href="#3.1.3-AGW-F-003">
-          <span class="section-number">3.1.3</span>
-          Filters
-        </a><ul><li><a href="#3.1.3.1-AGW-F-003A">
+        </a></li><li><a href="#3.1.3-Filters-AGW-F-003-Series">
+              <span class="section-number">3.1.3</span>
+              Filters: AGW-F-003* Series
+            </a><ul><li><a href="#3.1.3.1-AGW-F-003a">
           <span class="section-number">3.1.3.1</span>
           Drops
-        </a></li><li><a href="#3.1.3.2-AGW-F-003B">
+        </a></li><li><a href="#3.1.3.2-AGW-F-003b">
           <span class="section-number">3.1.3.2</span>
           Rate Limits
         </a></li></ul>
@@ -703,9 +703,33 @@ data-level="1.8"
     </a>
   </li>
   <li>
-    <a class="requirement_link-child" href="#1.13.2-CGW-S-005">
-      <span class="requirement_child-uid">CGW-S-005</span>
-      Preserves Atomic Multicast
+    <a class="requirement_link-child" href="#1.13.2.1-CGW-S-005a">
+      <span class="requirement_child-uid">CGW-S-005a</span>
+      Won't Drop Frames
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.2-CGW-S-005b">
+      <span class="requirement_child-uid">CGW-S-005b</span>
+      No Priority Inversion
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.3-CGW-S-005c">
+      <span class="requirement_child-uid">CGW-S-005c</span>
+      Preserves Ordering
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.4-CGW-S-005d">
+      <span class="requirement_child-uid">CGW-S-005d</span>
+      FIFO but Also Priority
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.5-CGW-S-005e">
+      <span class="requirement_child-uid">CGW-S-005e</span>
+      Preserves Jitter
     </a>
   </li>
   </ul>
@@ -851,15 +875,15 @@ data-level="1.13.1"
   <section class="requirement_section" data-section='meta'>
 
     
-    <h3
+    <h4
 class="section-title"
-data-level="1.13.2"
->Preserves Atomic Multicast
-</h3>
+data-level="1.13.2.1"
+>Won't Drop Frames
+</h4>
     <dl class="requirement_meta">
     
     <dt><i>UID</i></dt>
-    <dd>CGW-S-005</dd>
+    <dd>CGW-S-005a</dd>
     
   </dl>
     
@@ -878,7 +902,211 @@ data-level="1.13.2"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL preserve the atomic multicast property of CAN buses.</p>
+<p>The device SHALL NOT drop CAN frames in its bidirectional <em>UND*&lt;-&gt;*TND</em> operation, unless with explicit configuration for rate limiting (AGW-F-006) or translation (AGW-F-002)</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+
+  </section>
+
+</article>
+    </div>
+
+
+  </li><li class="requirement-tree_branch">
+    <div class="requirement-tree_node">
+      <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    
+    <h4
+class="section-title"
+data-level="1.13.2.2"
+>No Priority Inversion
+</h4>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>CGW-S-005b</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.8-AGW-S-007">
+      <span class="requirement_parent-uid">AGW-S-007</span>
+      Preserves High Side Operation
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL schedule egress frames according to the CAN arbitration ID priority in it bidirectional <em>UND*&lt;-&gt;*TND</em> operation, to prevent priority inversion.</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+
+  </section>
+
+</article>
+    </div>
+
+
+  </li><li class="requirement-tree_branch">
+    <div class="requirement-tree_node">
+      <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    
+    <h4
+class="section-title"
+data-level="1.13.2.3"
+>Preserves Ordering
+</h4>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>CGW-S-005c</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.8-AGW-S-007">
+      <span class="requirement_parent-uid">AGW-S-007</span>
+      Preserves High Side Operation
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL preserve ordering egress frames wrt their ingress order within an equivalence class of CAN arbitration ID priorities, to prevent out-of-order delivery.</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+
+  </section>
+
+</article>
+    </div>
+
+
+  </li><li class="requirement-tree_branch">
+    <div class="requirement-tree_node">
+      <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    
+    <h4
+class="section-title"
+data-level="1.13.2.4"
+>FIFO but Also Priority
+</h4>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>CGW-S-005d</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.8-AGW-S-007">
+      <span class="requirement_parent-uid">AGW-S-007</span>
+      Preserves High Side Operation
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL schedule egress for in-order send but not across CAN arbitration ID priorities.</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+
+  </section>
+
+</article>
+    </div>
+
+
+  </li><li class="requirement-tree_branch">
+    <div class="requirement-tree_node">
+      <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    
+    <h4
+class="section-title"
+data-level="1.13.2.5"
+>Preserves Jitter
+</h4>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>CGW-S-005e</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.8-AGW-S-007">
+      <span class="requirement_parent-uid">AGW-S-007</span>
+      Preserves High Side Operation
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL have ingress-to-egress latency variability (jitter) low enough to not affect the <em>TND</em> network domain performance requirements in the worst case.</p>
 </div>
 
   </div>
@@ -972,9 +1200,33 @@ data-level="1.8"
     </a>
   </li>
   <li>
-    <a class="requirement_link-child" href="#1.13.2-CGW-S-005">
-      <span class="requirement_child-uid">CGW-S-005</span>
-      Preserves Atomic Multicast
+    <a class="requirement_link-child" href="#1.13.2.1-CGW-S-005a">
+      <span class="requirement_child-uid">CGW-S-005a</span>
+      Won't Drop Frames
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.2-CGW-S-005b">
+      <span class="requirement_child-uid">CGW-S-005b</span>
+      No Priority Inversion
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.3-CGW-S-005c">
+      <span class="requirement_child-uid">CGW-S-005c</span>
+      Preserves Ordering
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.4-CGW-S-005d">
+      <span class="requirement_child-uid">CGW-S-005d</span>
+      FIFO but Also Priority
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.5-CGW-S-005e">
+      <span class="requirement_child-uid">CGW-S-005e</span>
+      Preserves Jitter
     </a>
   </li>
   </ul>
@@ -1331,9 +1583,33 @@ data-level="1.8"
     </a>
   </li>
   <li>
-    <a class="requirement_link-child" href="#1.13.2-CGW-S-005">
-      <span class="requirement_child-uid">CGW-S-005</span>
-      Preserves Atomic Multicast
+    <a class="requirement_link-child" href="#1.13.2.1-CGW-S-005a">
+      <span class="requirement_child-uid">CGW-S-005a</span>
+      Won't Drop Frames
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.2-CGW-S-005b">
+      <span class="requirement_child-uid">CGW-S-005b</span>
+      No Priority Inversion
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.3-CGW-S-005c">
+      <span class="requirement_child-uid">CGW-S-005c</span>
+      Preserves Ordering
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.4-CGW-S-005d">
+      <span class="requirement_child-uid">CGW-S-005d</span>
+      FIFO but Also Priority
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.5-CGW-S-005e">
+      <span class="requirement_child-uid">CGW-S-005e</span>
+      Preserves Jitter
     </a>
   </li>
   </ul>
@@ -1414,6 +1690,32 @@ data-level="1.13.1"
           <div class="content_item" data-role="children">
 </div>
         </section>
+          <section class="content_section">
+            <div class="content_item" data-role="current"><article class="docsection">
+
+  <section data-section="meta" class="docsection_section">
+
+    <div data-role='anchor' id="1.13.2-Preserves-Atomic-Multicast-CGW-S-005-Series"></div>
+
+    
+        <h3
+class="section-title"
+data-level="1.13.2"
+>Preserves Atomic Multicast: CGW-S-005* Series
+</h3>
+    
+
+  </section>
+
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>The device SHALL preserve the atomic multicast property of CAN buses. All CGW-S-005* requirements must be satisfied.</p>
+</div>
+
+    </div></section>
+
+</article></div>
+          </section>
         <section class="content_section">
           <div class="content_item" data-role="parents">
 
@@ -1444,9 +1746,33 @@ data-level="1.8"
     </a>
   </li>
   <li>
-    <a class="requirement_link-child" href="#1.13.2-CGW-S-005">
-      <span class="requirement_child-uid">CGW-S-005</span>
-      Preserves Atomic Multicast
+    <a class="requirement_link-child" href="#1.13.2.1-CGW-S-005a">
+      <span class="requirement_child-uid">CGW-S-005a</span>
+      Won't Drop Frames
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.2-CGW-S-005b">
+      <span class="requirement_child-uid">CGW-S-005b</span>
+      No Priority Inversion
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.3-CGW-S-005c">
+      <span class="requirement_child-uid">CGW-S-005c</span>
+      Preserves Ordering
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.4-CGW-S-005d">
+      <span class="requirement_child-uid">CGW-S-005d</span>
+      FIFO but Also Priority
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.5-CGW-S-005e">
+      <span class="requirement_child-uid">CGW-S-005e</span>
+      Preserves Jitter
     </a>
   </li>
   </ul>
@@ -1479,59 +1805,6 @@ data-level="1.8"
 
   <section class="requirement_section" data-section='meta'>
 
-    <div data-role='anchor' id="1.13.2-CGW-S-005"></div>
-    <h3
-class="section-title"
-data-level="1.13.2"
->Preserves Atomic Multicast
-</h3>
-    <dl class="requirement_meta">
-    
-    <dt><i>UID</i></dt>
-    <dd>CGW-S-005</dd>
-    
-  </dl>
-    
-<ul class="requirement_link">
-  <li>
-    <a class="requirement_link-parent" href="#1.8-AGW-S-007">
-      <span class="requirement_parent-uid">AGW-S-007</span>
-      Preserves High Side Operation
-    </a>
-  </li>
-  </ul>
-    
-
-  </section>
-  <section class="requirement_section" data-section='statement'>
-
-    <div class="requirement_statement">
-    <div class="document">
-<p>The device SHALL preserve the atomic multicast property of CAN buses.</p>
-</div>
-
-  </div>
-
-  </section>
-  <section class="requirement_section" data-section='comment'>
-
-    
-    
-
-  </section>
-
-</article></div>
-
-          <div class="content_item" data-role="children">
-</div>
-        </section>
-        <section class="content_section">
-          <div class="content_item" data-role="parents">
-</div>
-          <div class="content_item" data-role="current"><article class="requirement">
-
-  <section class="requirement_section" data-section='meta'>
-
     <div data-role='anchor' id="1.13.2.1-CGW-S-005a"></div>
     <h4
 class="section-title"
@@ -1545,6 +1818,14 @@ data-level="1.13.2.1"
     
   </dl>
     
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.8-AGW-S-007">
+      <span class="requirement_parent-uid">AGW-S-007</span>
+      Preserves High Side Operation
+    </a>
+  </li>
+  </ul>
     
 
   </section>
@@ -1572,7 +1853,89 @@ data-level="1.13.2.1"
         </section>
         <section class="content_section">
           <div class="content_item" data-role="parents">
+
+<ul class="requirement-tree requirement-tree_left"><li class="requirement-tree_branch">
+    <div class="requirement-tree_node">
+      <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    
+    <h2
+class="section-title"
+data-level="1.8"
+>Preserves High Side Operation
+</h2>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>AGW-S-007</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-child" href="#1.10-AGW-S-009">
+      <span class="requirement_child-uid">AGW-S-009</span>
+      Preserves Performance
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.1-CGW-S-005a">
+      <span class="requirement_child-uid">CGW-S-005a</span>
+      Won't Drop Frames
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.2-CGW-S-005b">
+      <span class="requirement_child-uid">CGW-S-005b</span>
+      No Priority Inversion
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.3-CGW-S-005c">
+      <span class="requirement_child-uid">CGW-S-005c</span>
+      Preserves Ordering
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.4-CGW-S-005d">
+      <span class="requirement_child-uid">CGW-S-005d</span>
+      FIFO but Also Priority
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.5-CGW-S-005e">
+      <span class="requirement_child-uid">CGW-S-005e</span>
+      Preserves Jitter
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL prevent degradation of any <em>TND</em> operation due to <em>UND</em> activity.</p>
 </div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+
+  </section>
+
+</article>
+    </div>
+
+
+  </li></ul></div>
           <div class="content_item" data-role="current"><article class="requirement">
 
   <section class="requirement_section" data-section='meta'>
@@ -1590,6 +1953,14 @@ data-level="1.13.2.2"
     
   </dl>
     
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.8-AGW-S-007">
+      <span class="requirement_parent-uid">AGW-S-007</span>
+      Preserves High Side Operation
+    </a>
+  </li>
+  </ul>
     
 
   </section>
@@ -1617,7 +1988,89 @@ data-level="1.13.2.2"
         </section>
         <section class="content_section">
           <div class="content_item" data-role="parents">
+
+<ul class="requirement-tree requirement-tree_left"><li class="requirement-tree_branch">
+    <div class="requirement-tree_node">
+      <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    
+    <h2
+class="section-title"
+data-level="1.8"
+>Preserves High Side Operation
+</h2>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>AGW-S-007</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-child" href="#1.10-AGW-S-009">
+      <span class="requirement_child-uid">AGW-S-009</span>
+      Preserves Performance
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.1-CGW-S-005a">
+      <span class="requirement_child-uid">CGW-S-005a</span>
+      Won't Drop Frames
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.2-CGW-S-005b">
+      <span class="requirement_child-uid">CGW-S-005b</span>
+      No Priority Inversion
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.3-CGW-S-005c">
+      <span class="requirement_child-uid">CGW-S-005c</span>
+      Preserves Ordering
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.4-CGW-S-005d">
+      <span class="requirement_child-uid">CGW-S-005d</span>
+      FIFO but Also Priority
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.5-CGW-S-005e">
+      <span class="requirement_child-uid">CGW-S-005e</span>
+      Preserves Jitter
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL prevent degradation of any <em>TND</em> operation due to <em>UND</em> activity.</p>
 </div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+
+  </section>
+
+</article>
+    </div>
+
+
+  </li></ul></div>
           <div class="content_item" data-role="current"><article class="requirement">
 
   <section class="requirement_section" data-section='meta'>
@@ -1635,6 +2088,14 @@ data-level="1.13.2.3"
     
   </dl>
     
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.8-AGW-S-007">
+      <span class="requirement_parent-uid">AGW-S-007</span>
+      Preserves High Side Operation
+    </a>
+  </li>
+  </ul>
     
 
   </section>
@@ -1662,7 +2123,89 @@ data-level="1.13.2.3"
         </section>
         <section class="content_section">
           <div class="content_item" data-role="parents">
+
+<ul class="requirement-tree requirement-tree_left"><li class="requirement-tree_branch">
+    <div class="requirement-tree_node">
+      <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    
+    <h2
+class="section-title"
+data-level="1.8"
+>Preserves High Side Operation
+</h2>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>AGW-S-007</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-child" href="#1.10-AGW-S-009">
+      <span class="requirement_child-uid">AGW-S-009</span>
+      Preserves Performance
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.1-CGW-S-005a">
+      <span class="requirement_child-uid">CGW-S-005a</span>
+      Won't Drop Frames
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.2-CGW-S-005b">
+      <span class="requirement_child-uid">CGW-S-005b</span>
+      No Priority Inversion
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.3-CGW-S-005c">
+      <span class="requirement_child-uid">CGW-S-005c</span>
+      Preserves Ordering
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.4-CGW-S-005d">
+      <span class="requirement_child-uid">CGW-S-005d</span>
+      FIFO but Also Priority
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.5-CGW-S-005e">
+      <span class="requirement_child-uid">CGW-S-005e</span>
+      Preserves Jitter
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL prevent degradation of any <em>TND</em> operation due to <em>UND</em> activity.</p>
 </div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+
+  </section>
+
+</article>
+    </div>
+
+
+  </li></ul></div>
           <div class="content_item" data-role="current"><article class="requirement">
 
   <section class="requirement_section" data-section='meta'>
@@ -1680,6 +2223,14 @@ data-level="1.13.2.4"
     
   </dl>
     
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.8-AGW-S-007">
+      <span class="requirement_parent-uid">AGW-S-007</span>
+      Preserves High Side Operation
+    </a>
+  </li>
+  </ul>
     
 
   </section>
@@ -1707,7 +2258,89 @@ data-level="1.13.2.4"
         </section>
         <section class="content_section">
           <div class="content_item" data-role="parents">
+
+<ul class="requirement-tree requirement-tree_left"><li class="requirement-tree_branch">
+    <div class="requirement-tree_node">
+      <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    
+    <h2
+class="section-title"
+data-level="1.8"
+>Preserves High Side Operation
+</h2>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>AGW-S-007</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-child" href="#1.10-AGW-S-009">
+      <span class="requirement_child-uid">AGW-S-009</span>
+      Preserves Performance
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.1-CGW-S-005a">
+      <span class="requirement_child-uid">CGW-S-005a</span>
+      Won't Drop Frames
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.2-CGW-S-005b">
+      <span class="requirement_child-uid">CGW-S-005b</span>
+      No Priority Inversion
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.3-CGW-S-005c">
+      <span class="requirement_child-uid">CGW-S-005c</span>
+      Preserves Ordering
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.4-CGW-S-005d">
+      <span class="requirement_child-uid">CGW-S-005d</span>
+      FIFO but Also Priority
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.2.5-CGW-S-005e">
+      <span class="requirement_child-uid">CGW-S-005e</span>
+      Preserves Jitter
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL prevent degradation of any <em>TND</em> operation due to <em>UND</em> activity.</p>
 </div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+
+  </section>
+
+</article>
+    </div>
+
+
+  </li></ul></div>
           <div class="content_item" data-role="current"><article class="requirement">
 
   <section class="requirement_section" data-section='meta'>
@@ -1725,6 +2358,14 @@ data-level="1.13.2.5"
     
   </dl>
     
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.8-AGW-S-007">
+      <span class="requirement_parent-uid">AGW-S-007</span>
+      Preserves High Side Operation
+    </a>
+  </li>
+  </ul>
     
 
   </section>
@@ -2811,51 +3452,32 @@ data-level="3.1.2"
           <div class="content_item" data-role="children">
 </div>
         </section>
-        <section class="content_section">
-          <div class="content_item" data-role="parents">
-</div>
-          <div class="content_item" data-role="current"><article class="requirement">
+          <section class="content_section">
+            <div class="content_item" data-role="current"><article class="docsection">
 
-  <section class="requirement_section" data-section='meta'>
+  <section data-section="meta" class="docsection_section">
 
-    <div data-role='anchor' id="3.1.3-AGW-F-003"></div>
-    <h3
+    <div data-role='anchor' id="3.1.3-Filters-AGW-F-003-Series"></div>
+
+    
+        <h3
 class="section-title"
 data-level="3.1.3"
->Filters
+>Filters: AGW-F-003* Series
 </h3>
-    <dl class="requirement_meta">
-    
-    <dt><i>UID</i></dt>
-    <dd>AGW-F-003</dd>
-    
-  </dl>
-    
     
 
   </section>
-  <section class="requirement_section" data-section='statement'>
 
-    <div class="requirement_statement">
-    <div class="document">
-<p>These devices MAY select which information is transported and/or translated between the network domains by satisfying all of these requirements:</p>
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>These devices MAY select which information is transported and/or translated between the network domains by satisfying all of these AGW-F-003* requirements:</p>
 </div>
 
-  </div>
-
-  </section>
-  <section class="requirement_section" data-section='comment'>
-
-    
-    
-
-  </section>
+    </div></section>
 
 </article></div>
-
-          <div class="content_item" data-role="children">
-</div>
-        </section>
+          </section>
         <section class="content_section">
           <div class="content_item" data-role="parents">
 </div>
@@ -2863,7 +3485,7 @@ data-level="3.1.3"
 
   <section class="requirement_section" data-section='meta'>
 
-    <div data-role='anchor' id="3.1.3.1-AGW-F-003A"></div>
+    <div data-role='anchor' id="3.1.3.1-AGW-F-003a"></div>
     <h4
 class="section-title"
 data-level="3.1.3.1"
@@ -2872,7 +3494,7 @@ data-level="3.1.3.1"
     <dl class="requirement_meta">
     
     <dt><i>UID</i></dt>
-    <dd>AGW-F-003A</dd>
+    <dd>AGW-F-003a</dd>
     
   </dl>
     
@@ -2908,7 +3530,7 @@ data-level="3.1.3.1"
 
   <section class="requirement_section" data-section='meta'>
 
-    <div data-role='anchor' id="3.1.3.2-AGW-F-003B"></div>
+    <div data-role='anchor' id="3.1.3.2-AGW-F-003b"></div>
     <h4
 class="section-title"
 data-level="3.1.3.2"
@@ -2917,7 +3539,7 @@ data-level="3.1.3.2"
     <dl class="requirement_meta">
     
     <dt><i>UID</i></dt>
-    <dd>AGW-F-003B</dd>
+    <dd>AGW-F-003b</dd>
     
   </dl>
     
