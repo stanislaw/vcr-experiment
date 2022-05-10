@@ -108,8 +108,50 @@
           <span class="section-number">1.13.2.5</span>
           Preserves Jitter
         </a></li></ul>
-            </li><li><a href="#1.13.3-CGW-S-100">
-          <span class="section-number">1.13.3</span>
+            </li><li><a href="#1.13.3-Prevents-CAN-Attacks">
+              <span class="section-number">1.13.3</span>
+              Prevents CAN Attacks
+            </a><ul><li><a href="#1.13.3.1-CGW-S-006">
+          <span class="section-number">1.13.3.1</span>
+          Prevents Bus Flood Attacks
+        </a></li><li><a href="#1.13.3.2-CGW-S-007">
+          <span class="section-number">1.13.3.2</span>
+          Prevents (Simple) Frame Spoofing
+        </a></li><li><a href="#1.13.3.3-Prevents-CAN-Protocol-Attacks-CGW-S-008-Series">
+              <span class="section-number">1.13.3.3</span>
+              Prevents CAN Protocol Attacks: CGW-S-008* Series
+            </a><ul><li><a href="#1.13.3.3.1-CGW-S-008a">
+          <span class="section-number">1.13.3.3.1</span>
+          Prevents Adaptive Frame Spoofing
+        </a></li><li><a href="#1.13.3.3.2-CGW-S-008b">
+          <span class="section-number">1.13.3.3.2</span>
+          Prevents Error Passive Attack Step
+        </a></li><li><a href="#1.13.3.3.3-CGW-S-008c">
+          <span class="section-number">1.13.3.3.3</span>
+          Prevents Double Receive Attack
+        </a></li><li><a href="#1.13.3.3.4-CGW-S-008d">
+          <span class="section-number">1.13.3.3.4</span>
+          Prevents Bus-Off Attack
+        </a></li><li><a href="#1.13.3.3.5-CGW-S-008e">
+          <span class="section-number">1.13.3.3.5</span>
+          Prevents Freeze Doom Loop Attack
+        </a></li></ul>
+            </li><li><a href="#1.13.3.4-CGW-S-013">
+          <span class="section-number">1.13.3.4</span>
+          Impervious to Janus Attack
+        </a></li></ul>
+            </li></ul>
+            </li><li><a href="#1.14-Security-Requirements-for-J1939-Gateways">
+              <span class="section-number">1.14</span>
+              Security Requirements for J1939 Gateways
+            </a><ul><li><a href="#1.14.1-J1939GW-S-039">
+          <span class="section-number">1.14.1</span>
+          Prevents J1939 Address Spoofing
+        </a></li><li><a href="#1.14.2-J1939GW-S-029">
+          <span class="section-number">1.14.2</span>
+          Prevents Address Claim Attacks
+        </a></li><li><a href="#1.14.3-J1939GW-S-089">
+          <span class="section-number">1.14.3</span>
           Impervious to Address Claim Attacks
         </a></li></ul>
             </li></ul>
@@ -393,9 +435,27 @@ data-level="1.3"
     
 <ul class="requirement_link">
   <li>
-    <a class="requirement_link-child" href="#1.13.3-CGW-S-100">
-      <span class="requirement_child-uid">CGW-S-100</span>
-      Impervious to Address Claim Attacks
+    <a class="requirement_link-child" href="#1.13.3.1-CGW-S-006">
+      <span class="requirement_child-uid">CGW-S-006</span>
+      Prevents Bus Flood Attacks
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.3.3.4-CGW-S-008d">
+      <span class="requirement_child-uid">CGW-S-008d</span>
+      Prevents Bus-Off Attack
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.3.3.5-CGW-S-008e">
+      <span class="requirement_child-uid">CGW-S-008e</span>
+      Prevents Freeze Doom Loop Attack
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.14.2-J1939GW-S-029">
+      <span class="requirement_child-uid">J1939GW-S-029</span>
+      Prevents Address Claim Attacks
     </a>
   </li>
   </ul>
@@ -439,6 +499,26 @@ data-level="1.4"
     
   </dl>
     
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-child" href="#1.13.3.2-CGW-S-007">
+      <span class="requirement_child-uid">CGW-S-007</span>
+      Prevents (Simple) Frame Spoofing
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.3.3.1-CGW-S-008a">
+      <span class="requirement_child-uid">CGW-S-008a</span>
+      Prevents Adaptive Frame Spoofing
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.14.1-J1939GW-S-039">
+      <span class="requirement_child-uid">J1939GW-S-039</span>
+      Prevents J1939 Address Spoofing
+    </a>
+  </li>
+  </ul>
     
 
   </section>
@@ -643,6 +723,18 @@ data-level="1.8"
       Preserves Jitter
     </a>
   </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.3.3.2-CGW-S-008b">
+      <span class="requirement_child-uid">CGW-S-008b</span>
+      Prevents Error Passive Attack Step
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.13.3.3.3-CGW-S-008c">
+      <span class="requirement_child-uid">CGW-S-008c</span>
+      Prevents Double Receive Attack
+    </a>
+  </li>
   </ul>
     
 
@@ -684,6 +776,20 @@ data-level="1.9"
     
   </dl>
     
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-child" href="#1.13.3.4-CGW-S-013">
+      <span class="requirement_child-uid">CGW-S-013</span>
+      Impervious to Janus Attack
+    </a>
+  </li>
+  <li>
+    <a class="requirement_link-child" href="#1.14.3-J1939GW-S-089">
+      <span class="requirement_child-uid">J1939GW-S-089</span>
+      Impervious to Address Claim Attacks
+    </a>
+  </li>
+  </ul>
     
 
   </section>
@@ -792,7 +898,7 @@ data-level="1.11"
     <div class="document">
 <p>The device SHALL have a means to temporarily disable the preventions listed previously and as noted with &quot;unless with explicity authorized and authenticated configuration changes via the mode switch&quot; The means must be impossible to use without explicit authorization by the vehicle owner. The device SHALL satisfy one or more of these methods to enable a switch into modes which allow OTA, spoofing, etc. from <em>UND</em> to <em>TND</em>. If more than one is satisfied then the effects of either switch could be in effect concurrently (i.e. a logical OR operation).</p>
 <ul class="simple">
-<li>Physical Mode Switch Interlock: The device SHALL have at least on physical input that when grounded enables a switch into modes which allow OTA, spoofing, etc. from <em>UND</em> to <em>TND</em>.<ul>
+<li>Physical Mode Switch Interlock: The device SHALL have at least one physical input that when grounded enables a switch into modes which allow OTA, spoofing, etc. from <em>UND</em> to <em>TND</em>.<ul>
 <li>Example: Physical switch on dash</li>
 </ul>
 </li>
@@ -1193,20 +1299,42 @@ data-level="1.13.2.5"
   </section>
 
 </article>
+          <article class="docsection">
+
+  <section data-section="meta" class="docsection_section">
+
+    <div data-role='anchor' id="1.13.3-Prevents-CAN-Attacks"></div>
+
+    
+        <h3
+class="section-title"
+data-level="1.13.3"
+>Prevents CAN Attacks
+</h3>
+    
+
+  </section>
+
+  
+
+</article>
           <article class="requirement">
 
   <section class="requirement_section" data-section='meta'>
 
-    <div data-role='anchor' id="1.13.3-CGW-S-100"></div>
-    <h3
+    <div data-role='anchor' id="1.13.3.1-CGW-S-006"></div>
+    <h4
 class="section-title"
-data-level="1.13.3"
->Impervious to Address Claim Attacks
-</h3>
+data-level="1.13.3.1"
+>Prevents Bus Flood Attacks
+</h4>
     <dl class="requirement_meta">
     
     <dt><i>UID</i></dt>
-    <dd>CGW-S-100</dd>
+    <dd>CGW-S-006</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
     
   </dl>
     
@@ -1225,7 +1353,582 @@ data-level="1.13.3"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL not be susceptible to address claim attacks.</p>
+<p>The device SHALL prevent generating bus flood attacks on <em>TND</em> from messages originating on <em>UND</em>. c.f. <a class="reference external" href="https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf">https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf</a> section 2.1 for a description of the bus flood attack.</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+    
+  
+
+  </section>
+
+</article>
+          <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    <div data-role='anchor' id="1.13.3.2-CGW-S-007"></div>
+    <h4
+class="section-title"
+data-level="1.13.3.2"
+>Prevents (Simple) Frame Spoofing
+</h4>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>CGW-S-007</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.4-AGW-S-003">
+      <span class="requirement_parent-uid">AGW-S-003</span>
+      Prevents Spoofing
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL prevent generating simple frame spoofing attacks on <em>TND</em> from messages originating on <em>UND</em>. c.f. <a class="reference external" href="https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf">https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf</a> section 2.2 for a description of simple frame spoofing attack.</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+    
+  
+
+  </section>
+
+</article>
+          <article class="docsection">
+
+  <section data-section="meta" class="docsection_section">
+
+    <div data-role='anchor' id="1.13.3.3-Prevents-CAN-Protocol-Attacks-CGW-S-008-Series"></div>
+
+    
+        <h4
+class="section-title"
+data-level="1.13.3.3"
+>Prevents CAN Protocol Attacks: CGW-S-008* Series
+</h4>
+    
+
+  </section>
+
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>The CAN gateways must prevent CAN protocol attacks in <em>TND</em>. At the time of drafting these requirements this can be accomplished by satisfying all of the CGW-S-008* requirements that follow.</p>
+<dl class="docutils">
+<dt>CAN Protocol Attack</dt>
+<dd>Attacks on CAN networks requiring GPIO control of CAN_TX (and optionally CAN_RX) pins.</dd>
+</dl>
+<p>c.f. <a class="reference external" href="https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf">https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf</a> section 2.1 for further definition of CAN protocol attacks.</p>
+</div>
+
+    </div></section>
+
+</article>
+          <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    <div data-role='anchor' id="1.13.3.3.1-CGW-S-008a"></div>
+    <h5
+class="section-title"
+data-level="1.13.3.3.1"
+>Prevents Adaptive Frame Spoofing
+</h5>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>CGW-S-008a</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.4-AGW-S-003">
+      <span class="requirement_parent-uid">AGW-S-003</span>
+      Prevents Spoofing
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL prevent generating adaptive frame spoofing attacks on <em>TND</em> from messages originating on <em>UND</em>. c.f. <a class="reference external" href="https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf">https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf</a> section 2.3 for a description of adaptive frame spoofing attack.</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+    
+  
+
+  </section>
+
+</article>
+          <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    <div data-role='anchor' id="1.13.3.3.2-CGW-S-008b"></div>
+    <h5
+class="section-title"
+data-level="1.13.3.3.2"
+>Prevents Error Passive Attack Step
+</h5>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>CGW-S-008b</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.8-AGW-S-007">
+      <span class="requirement_parent-uid">AGW-S-007</span>
+      Preserves High Side Operation
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL prevent generating attacks that drive a ECU on <em>TND</em> into error passive state from messages originating on <em>UND</em>. This will in turn prevent error passive spoofing attacks c.f. <a class="reference external" href="https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf">https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf</a> section 2.4 for a description of error passive spoofing attack.</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+    
+  
+
+  </section>
+
+</article>
+          <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    <div data-role='anchor' id="1.13.3.3.3-CGW-S-008c"></div>
+    <h5
+class="section-title"
+data-level="1.13.3.3.3"
+>Prevents Double Receive Attack
+</h5>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>CGW-S-008c</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.8-AGW-S-007">
+      <span class="requirement_parent-uid">AGW-S-007</span>
+      Preserves High Side Operation
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL prevent generating double receive attacks on <em>TND</em> from messages originating on <em>UND</em>. c.f. <a class="reference external" href="https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf">https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf</a> section 2.5 for a description of the double receive attack.</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+    
+  
+
+  </section>
+
+</article>
+          <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    <div data-role='anchor' id="1.13.3.3.4-CGW-S-008d"></div>
+    <h5
+class="section-title"
+data-level="1.13.3.3.4"
+>Prevents Bus-Off Attack
+</h5>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>CGW-S-008d</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.3-AGW-S-002">
+      <span class="requirement_parent-uid">AGW-S-002</span>
+      Prevents DoS
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL prevent generating bus-off attacks on <em>TND</em> from messages originating on <em>UND</em>. c.f. <a class="reference external" href="https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf">https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf</a> section 2.6 for a description of the bus-off attack.</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+    
+  
+
+  </section>
+
+</article>
+          <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    <div data-role='anchor' id="1.13.3.3.5-CGW-S-008e"></div>
+    <h5
+class="section-title"
+data-level="1.13.3.3.5"
+>Prevents Freeze Doom Loop Attack
+</h5>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>CGW-S-008e</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.3-AGW-S-002">
+      <span class="requirement_parent-uid">AGW-S-002</span>
+      Prevents DoS
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL prevent generating freeze doom loop attacks on <em>TND</em> from messages originating on <em>UND</em>. c.f. <a class="reference external" href="https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf">https://canislabs.com/wp-content/uploads/2020/05/1901-2019-11-29-White-Paper-CAN-Security.pdf</a> section 2.7 for a description of the freeze doom loop attack.</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+    
+  
+
+  </section>
+
+</article>
+          <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    <div data-role='anchor' id="1.13.3.4-CGW-S-013"></div>
+    <h4
+class="section-title"
+data-level="1.13.3.4"
+>Impervious to Janus Attack
+</h4>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>CGW-S-013</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>Medium</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.9-AGW-S-008">
+      <span class="requirement_parent-uid">AGW-S-008</span>
+      Security Assurance
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL not enable Janus Attacks in any group of OEM supplied components on any of its interface. c.f. <a class="reference external" href="https://kentindell.github.io/2021/07/15/janus-attack/">https://kentindell.github.io/2021/07/15/janus-attack/</a> for a description of the Janus Attack.</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+    <div class="requirement_comment">
+      <div class="document">
+<p>Susceptibility to Janus Attacks is a property of a network of devices, not only of a single device. The entire <em>TND</em> is expected to be impervious to Janus Attacks since it should all be OEM supplied components there. In <em>UND</em> it is not possible to require that this device nor all the devices are impervious to Janus Attacks since <em>UND</em> is explicitly permitted to contain non-OEM supplied components. What is required of this device on <em>UND</em> is that if there are other OEM supplied devices on <em>UND</em> then this device cannot enable Janus Attacks on that collection of all those OEM supplied devices on <em>UND</em>.</p>
+</div>
+
+    </div>
+    
+  
+
+  </section>
+
+</article>
+          <article class="docsection">
+
+  <section data-section="meta" class="docsection_section">
+
+    <div data-role='anchor' id="1.14-Security-Requirements-for-J1939-Gateways"></div>
+
+    
+        <h2
+class="section-title"
+data-level="1.14"
+>Security Requirements for J1939 Gateways
+</h2>
+    
+
+  </section>
+
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>J1939 Gateways are expected to meet all of the CGW-S-* CAN Gateway Security Requirements and to also satisfy the J1939GW-S-* Security requirements of this section</p>
+</div>
+
+    </div></section>
+
+</article>
+          <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    <div data-role='anchor' id="1.14.1-J1939GW-S-039"></div>
+    <h3
+class="section-title"
+data-level="1.14.1"
+>Prevents J1939 Address Spoofing
+</h3>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>J1939GW-S-039</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>Medium</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.4-AGW-S-003">
+      <span class="requirement_parent-uid">AGW-S-003</span>
+      Prevents Spoofing
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device shall prevent the gatewaying (any of transport, translate, filter, or encapsulate) of any traffic onto <em>TND</em> with a J1939 address which is claimed by any of the devices in <em>TND</em>.</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+    
+  
+
+  </section>
+
+</article>
+          <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    <div data-role='anchor' id="1.14.2-J1939GW-S-029"></div>
+    <h3
+class="section-title"
+data-level="1.14.2"
+>Prevents Address Claim Attacks
+</h3>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>J1939GW-S-029</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.3-AGW-S-002">
+      <span class="requirement_parent-uid">AGW-S-002</span>
+      Prevents DoS
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL prevent generating address claim attacks on <em>TND</em> from messages originating on <em>UND</em>. c.f. <a class="reference external" href="https://www.aut.upt.ro/~bgroza/Papers/j1939.pdf">https://www.aut.upt.ro/~bgroza/Papers/j1939.pdf</a> and <a class="reference external" href="https://doi.org/10.4271/02-14-03-0026">https://doi.org/10.4271/02-14-03-0026</a> for a description of the address claim attack.</p>
+</div>
+
+  </div>
+
+  </section>
+  <section class="requirement_section" data-section='comment'>
+
+    
+    
+    <div class="requirement_comment">
+      <div class="document">
+<p><strong>Note to implementors</strong>: Performing no gatewaying (any of transport, translate, filter, or encapsulate) of address claims onto <em>TND</em> would satisfy this requirement.</p>
+</div>
+
+    </div>
+    
+  
+
+  </section>
+
+</article>
+          <article class="requirement">
+
+  <section class="requirement_section" data-section='meta'>
+
+    <div data-role='anchor' id="1.14.3-J1939GW-S-089"></div>
+    <h3
+class="section-title"
+data-level="1.14.3"
+>Impervious to Address Claim Attacks
+</h3>
+    <dl class="requirement_meta">
+    
+    <dt><i>UID</i></dt>
+    <dd>J1939GW-S-089</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
+  </dl>
+    
+<ul class="requirement_link">
+  <li>
+    <a class="requirement_link-parent" href="#1.9-AGW-S-008">
+      <span class="requirement_parent-uid">AGW-S-008</span>
+      Security Assurance
+    </a>
+  </li>
+  </ul>
+    
+
+  </section>
+  <section class="requirement_section" data-section='statement'>
+
+    <div class="requirement_statement">
+    <div class="document">
+<p>The device SHALL not be susceptible to address claim attacks on any of its interfaces (e.g. <em>TND</em> and <em>UND</em>)</p>
 </div>
 
   </div>
