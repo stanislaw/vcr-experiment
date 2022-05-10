@@ -178,12 +178,12 @@
           Won't Encapsulate
         </a></li></ul>
             </li></ul>
-            </li><li><a href="#3-Vehicle-Gateway-Functional-Requirements">
+            </li><li><a href="#3-Abstract-Intended-Gateway-Functional-Requirements">
               <span class="section-number">3</span>
-              Vehicle Gateway (Functional) Requirements
-            </a><ul><li><a href="#3.1-Devices-Intended-to-be-a-Gateway">
+              Abstract (Intended) Gateway Functional Requirements
+            </a><ul><li><a href="#3.1-Abstract-Intended-Gateway-Core-Functional-Requirements">
               <span class="section-number">3.1</span>
-              Devices Intended to be a Gateway
+              Abstract (Intended) Gateway Core Functional Requirements
             </a><ul><li><a href="#3.1.1-AGW-F-001">
           <span class="section-number">3.1.1</span>
           Transports
@@ -203,17 +203,21 @@
             </li><li><a href="#3.1.4-AGW-F-004">
           <span class="section-number">3.1.4</span>
           Encapsulates
-        </a></li><li><a href="#3.1.5-AGW-F-007">
-          <span class="section-number">3.1.5</span>
+        </a></li></ul>
+            </li><li><a href="#3.2-Abstract-Intended-Gateway-Additional-Functional-Requirements">
+              <span class="section-number">3.2</span>
+              Abstract (Intended) Gateway Additional Functional Requirements
+            </a><ul><li><a href="#3.2.1-AGW-F-007">
+          <span class="section-number">3.2.1</span>
           Controllable
-        </a></li><li><a href="#3.1.6-AGW-F-008">
-          <span class="section-number">3.1.6</span>
+        </a></li><li><a href="#3.2.2-AGW-F-008">
+          <span class="section-number">3.2.2</span>
           Configurable
-        </a></li><li><a href="#3.1.7-AGW-F-009">
-          <span class="section-number">3.1.7</span>
+        </a></li><li><a href="#3.2.3-AGW-F-009">
+          <span class="section-number">3.2.3</span>
           Reports
-        </a></li><li><a href="#3.1.8-AGW-F-010">
-          <span class="section-number">3.1.8</span>
+        </a></li><li><a href="#3.2.4-AGW-F-010">
+          <span class="section-number">3.2.4</span>
           Diagnoses
         </a></li></ul>
             </li></ul>
@@ -267,36 +271,17 @@
 
       <div class="content"><section data-col="0"><div class="free-text">
             <div class="document">
-<p>This document is an experimental capture of a list of security requirements for the gateway devices which are prevalent and proliferating in heavy vehicle network architectures.</p>
-<p>The collection of requirements captured here in <tt class="docutils literal">strictdoc</tt> form were developed in a breakout session at the NMFTA CTSRP November 2021 workshop. The breakout session group discussed a) the workable definition of a gateway device -- focusing especially on the attacker's perspective -- b) possible security requirements for those devices that are gateways (intentional or not) and c) attempted to tie those back to the security requirements for vehicle gateways which were outline by a vehicle network security expert whose presentation on the subject was delivered earlier that day. The workshop participants and the expert cannot be revealed here, except by their own actions since the workshop was held -- as is tradition -- under Chatham house rules.</p>
-<p>The reason why gateway devices were considered is because the previous work of the RFPCTL working group focused on telematics devices (ultimately releasing the TSRM) and the next most relevant device from a security point of view are devices that enable pivoting/lateral-movement in attacks: gateways. Indeed, the interim result of the VCRWG is that there are multiple likely present devices in modern heavy duty vehicle which are gateway devices.</p>
-<p>This experimental capture of the requirements as <tt class="docutils literal">strictdoc</tt> <tt class="docutils literal">STATEMENT</tt> blocks was performed because the completion of the work by the RFPCTL working group yielded a large number of requirements that need to be periodically updated, refined, reviewed etc. And furthermore the requirements need to be processed on each release to produce printable references and questionnaires for use by the fleets in the procurement processes. We expect that by the completion of the work by the VCRWG that there will be even more requirements to manage in ongoing releases and to produce more products such as in the TSRM. It is clear that machine readable form for specifying the requirements is necessary. An alternative considered was <cite>doorstop</cite> but the multi-file approach of doorstop was estimated to cause more friction in development and review of the requirements by the VCRWG.</p>
-<p>This document contains requirements where the working group cannot reasonably require a particular implementation option, only that one of the satisfactory ways to satisfy the requirement is implemented. Modelling these 'options' requirements is not possible nor reccomended: the sheer number of requirements which will be captured for heavy vehicles means that the requirements must remain machine readable and there is no machine readable way to communicate options to implementors (for good reason). The approach that is taken is to a) include the options as notes to the implementers of these requirements and b) to tag all requirements with <cite>CONTAINS_OPTIONS</cite> so the entire list of requirements containing notes to the implementers can be indexed for easy reference by them.</p>
-</div>
-
-          </div></section>
-          <article class="docsection">
-
-  <section data-section="meta" class="docsection_section">
-
-    <div data-role='anchor' id="1-Security-Requirements-for-Abstract-Intended-Gateways"></div>
-
-    
-        <h1
-class="section-title"
-data-level="1"
->Security Requirements for Abstract (Intended) Gateways
-</h1>
-    
-
-  </section>
-
-  <section data-section="description" class="docsection_section"><div class="free-text">
-      <div class="document">
-<p>The group discussed what security requirements would need to be satisfied by a device intended to be a gateway: a device which is intended to move/translate etc (see section <em>Devices Intended to be a Gateway</em>) information from an Untrusted Network Domain (<em>UND</em>) to a Trusted Network Domain (<em>TND</em>).</p>
+<p>This document captures security requirements for vehicle network gateway devices: both devices intended to be gateways and those devices which <em>could be a gateway</em> (due to malicious code).</p>
 <dl class="docutils">
-<dt>Untrusted Network Domain (<em>UND</em>)</dt>
-<dd><p class="first">A <em>UND</em> is a network domain (or segment) that contains <strong>*any*</strong> of the following:</p>
+<dt>Intended Gateway:</dt>
+<dd>A device which had connections to multiple vehicle network domains (or segments) and is intended to transport, translate, filter/drop/rate-limit or encapsulate information from an Untrusted Network Domain (<em>UND</em>) to a Trusted Network Domain (<em>TND</em>). Any device which performs one or more of these functions is an intended gateway. See the section <em>Abstract (Intended) Gateway Core Functional Requirements</em> for more details.</dd>
+<dt>Unintended Gateway:</dt>
+<dd>A device which could be a gateway (due to malicious code) but is not intended to be one. See the section <em>Prevents Gateway Functions</em> for details on the security assurance necessary to prevent gateway functionality on unintended gateways.</dd>
+</dl>
+<p>Intended gateways are designed to transport, translate etc. between two separate network domains (or segments). They do so asymmetrically, treating one segment as trustworthy.</p>
+<dl class="docutils">
+<dt>Untrusted Network Domain (<em>UND</em>):</dt>
+<dd><p class="first">A <em>UND</em> is a network domain (or segment) that contains <strong>any</strong> of the following:</p>
 <ol class="last loweralpha simple">
 <li>wireless communication or reachable wirelessly (e.g J2497)</li>
 <li>an interface for aftermarket devices or operator access (e.g. an OBD port)</li>
@@ -304,8 +289,8 @@ data-level="1"
 <li>a multi-network device (e.g. intended or unintended gateway) that does not satisfy the HD VCR requirements</li>
 </ol>
 </dd>
-<dt>Trusted Network Domain (<em>TND</em>)</dt>
-<dd><p class="first">A <em>TND</em> is a network domain (or segment) that <strong>*does not contain any*</strong> of the following:</p>
+<dt>Trusted Network Domain (<em>TND</em>):</dt>
+<dd><p class="first">A <em>TND</em> is a network domain (or segment) that <strong>does not contain any</strong> of the following:</p>
 <ol class="last loweralpha simple">
 <li>wireless communication or reachable wirelessly (e.g J2497)</li>
 <li>an interface for aftermarket devices or operator access (e.g. an OBD port)</li>
@@ -331,6 +316,29 @@ data-level="1"
   TND   │  requirements │     UND         │   Connector  │      UND            │┼│
         └───────────────┘                 └──────────────┘                     └─┘
 </pre>
+<p>Note on options for requirements: This document contains requirements where the working group cannot reasonably require a particular implementation option, only that one of the satisfactory ways to satisfy the requirement is implemented. Modelling these 'options' requirements is not possible nor reccomended: the sheer number of requirements which will be captured for heavy vehicles means that the requirements must remain machine readable and there is no machine readable way to communicate options to implementors (for good reason). The approach that is taken is to a) include the options as notes to the implementers of these requirements and b) to tag all requirements with <cite>CONTAINS_OPTIONS</cite> so the entire list of requirements containing notes to the implementers can be indexed for easy reference by them.</p>
+</div>
+
+          </div></section>
+          <article class="docsection">
+
+  <section data-section="meta" class="docsection_section">
+
+    <div data-role='anchor' id="1-Security-Requirements-for-Abstract-Intended-Gateways"></div>
+
+    
+        <h1
+class="section-title"
+data-level="1"
+>Security Requirements for Abstract (Intended) Gateways
+</h1>
+    
+
+  </section>
+
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>The following requirements must be satisfied by any device intended to be a gateway on <em>any type of</em> vehicle networks. There are CAN-specific and J1939-sepcific requirements in the CGW- and J1939GW- series below.</p>
 </div>
 
     </div></section>
@@ -350,6 +358,9 @@ data-level="1.1"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-000</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
     
   </dl>
     
@@ -391,6 +402,9 @@ data-level="1.2"
     <dt><i>UID</i></dt>
     <dd>AGW-S-001</dd>
     
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
   </dl>
     
     
@@ -430,6 +444,9 @@ data-level="1.3"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-002</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
     
   </dl>
     
@@ -497,6 +514,9 @@ data-level="1.4"
     <dt><i>UID</i></dt>
     <dd>AGW-S-003</dd>
     
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
   </dl>
     
 <ul class="requirement_link">
@@ -560,6 +580,9 @@ data-level="1.5"
     <dt><i>TAGS</i></dt>
     <dd>CONTAINS_OPTIONS</dd>
     
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
   </dl>
     
     
@@ -604,6 +627,9 @@ data-level="1.6"
     <dt><i>UID</i></dt>
     <dd>AGW-S-005</dd>
     
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
   </dl>
     
     
@@ -644,6 +670,9 @@ data-level="1.7"
     <dt><i>UID</i></dt>
     <dd>AGW-S-006</dd>
     
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
   </dl>
     
     
@@ -653,7 +682,7 @@ data-level="1.7"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL prevent all data loss and/or corruption of information in the bidirectional <em>UND*&lt;-&gt;*TND</em> operation, unless with explicit configuration for rate limiting (AGW-F-006) or translation (AGW-F-002).</p>
+<p>The device SHALL prevent all data loss and/or corruption of information in the bidirectional <em>UND</em> ↔ <em>TND</em> operation, unless with explicit configuration for rate limiting (AGW-F-006) or translation (AGW-F-002).</p>
 </div>
 
   </div>
@@ -683,6 +712,9 @@ data-level="1.8"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-007</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
     
   </dl>
     
@@ -774,6 +806,9 @@ data-level="1.9"
     <dt><i>UID</i></dt>
     <dd>AGW-S-008</dd>
     
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
   </dl>
     
 <ul class="requirement_link">
@@ -827,6 +862,9 @@ data-level="1.10"
     
     <dt><i>UID</i></dt>
     <dd>AGW-S-009</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>Medium</dd>
     
   </dl>
     
@@ -887,6 +925,9 @@ data-level="1.11"
     <dt><i>TAGS</i></dt>
     <dd>CONTAINS_OPTIONS</dd>
     
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
   </dl>
     
     
@@ -938,6 +979,9 @@ data-level="1.12"
     <dt><i>UID</i></dt>
     <dd>AGW-S-011</dd>
     
+    <dt><i>CRITICALITY</i></dt>
+    <dd>Medium</dd>
+    
   </dl>
     
     
@@ -981,7 +1025,7 @@ data-level="1.13"
 
   <section data-section="description" class="docsection_section"><div class="free-text">
       <div class="document">
-<p>The group discussed what security requirements would need to be satisfied by CAN gateways specifically. Ideally these would all map back to Abstract (Intended) Gateway requirements. Most of these are from the security gateway requirements presented by the expert earlier in the workshop.</p>
+<p>The following security requirements must be satisfied by CAN gateways specifically. These CAN gateways are expected to meet all of the AGW-S-* Abstract Gateway security requirements and to also satisfy the CGW-S-* security requirements of this section.</p>
 </div>
 
     </div></section>
@@ -1001,6 +1045,9 @@ data-level="1.13.1"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-001</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>Medium</dd>
     
   </dl>
     
@@ -1074,6 +1121,9 @@ data-level="1.13.2.1"
     <dt><i>UID</i></dt>
     <dd>CGW-S-005a</dd>
     
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
   </dl>
     
 <ul class="requirement_link">
@@ -1091,7 +1141,7 @@ data-level="1.13.2.1"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL NOT drop CAN frames in its bidirectional <em>UND*&lt;-&gt;*TND</em> operation, unless with explicit configuration for rate limiting (AGW-F-006) or translation (AGW-F-002)</p>
+<p>The device SHALL NOT drop CAN frames in its bidirectional <em>UND</em> ↔ <em>TND</em> operation, unless with explicit configuration for rate limiting (AGW-F-006) or translation (AGW-F-002)</p>
 </div>
 
   </div>
@@ -1122,6 +1172,9 @@ data-level="1.13.2.2"
     <dt><i>UID</i></dt>
     <dd>CGW-S-005b</dd>
     
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
   </dl>
     
 <ul class="requirement_link">
@@ -1139,7 +1192,7 @@ data-level="1.13.2.2"
 
     <div class="requirement_statement">
     <div class="document">
-<p>The device SHALL schedule egress frames according to the CAN arbitration ID priority in it bidirectional <em>UND*&lt;-&gt;*TND</em> operation, to prevent priority inversion.</p>
+<p>The device SHALL schedule egress frames according to the CAN arbitration ID priority in it bidirectional <em>UND</em> ↔ <em>TND</em> operation, to prevent priority inversion.</p>
 </div>
 
   </div>
@@ -1169,6 +1222,9 @@ data-level="1.13.2.3"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-005c</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
     
   </dl>
     
@@ -1218,6 +1274,9 @@ data-level="1.13.2.4"
     <dt><i>UID</i></dt>
     <dd>CGW-S-005d</dd>
     
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
   </dl>
     
 <ul class="requirement_link">
@@ -1265,6 +1324,9 @@ data-level="1.13.2.5"
     
     <dt><i>UID</i></dt>
     <dd>CGW-S-005e</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>Medium</dd>
     
   </dl>
     
@@ -1983,6 +2045,9 @@ data-level="2.1"
     <dt><i>UID</i></dt>
     <dd>NGW-S-001</dd>
     
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
   </dl>
     
 <ul class="requirement_link">
@@ -2068,6 +2133,9 @@ data-level="2.2.1"
     <dt><i>UID</i></dt>
     <dd>NGW-S-002</dd>
     
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
   </dl>
     
 <ul class="requirement_link">
@@ -2115,6 +2183,9 @@ data-level="2.2.2"
     
     <dt><i>UID</i></dt>
     <dd>NGW-S-003</dd>
+    
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
     
   </dl>
     
@@ -2164,6 +2235,9 @@ data-level="2.2.3"
     <dt><i>UID</i></dt>
     <dd>NGW-S-004</dd>
     
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
   </dl>
     
 <ul class="requirement_link">
@@ -2212,6 +2286,9 @@ data-level="2.2.4"
     <dt><i>UID</i></dt>
     <dd>NGW-S-005</dd>
     
+    <dt><i>CRITICALITY</i></dt>
+    <dd>High</dd>
+    
   </dl>
     
 <ul class="requirement_link">
@@ -2249,47 +2326,43 @@ data-level="2.2.4"
 
   <section data-section="meta" class="docsection_section">
 
-    <div data-role='anchor' id="3-Vehicle-Gateway-Functional-Requirements"></div>
+    <div data-role='anchor' id="3-Abstract-Intended-Gateway-Functional-Requirements"></div>
 
     
         <h1
 class="section-title"
 data-level="3"
->Vehicle Gateway (Functional) Requirements
+>Abstract (Intended) Gateway Functional Requirements
 </h1>
     
 
   </section>
 
-  <section data-section="description" class="docsection_section"><div class="free-text">
-      <div class="document">
-<p>The group discussed some of the non-security related requirements of a gateway.</p>
-<p><strong>NB: These are capture here only as a demonstration of some of the ``strictdoc`` features, and probably only temporarily.</strong></p>
-<p>What are gateways? A: anything that is connected to two or more vehicle networks</p>
-<p>Could be on heterogeneous vehicle networks (e.g. J1939 and J1708)</p>
-<p>We discussed the simple dualism: Devices ”intended to be a gateway” and those “not intended to be a gateway.”</p>
-</div>
-
-    </div></section>
+  
 
 </article>
           <article class="docsection">
 
   <section data-section="meta" class="docsection_section">
 
-    <div data-role='anchor' id="3.1-Devices-Intended-to-be-a-Gateway"></div>
+    <div data-role='anchor' id="3.1-Abstract-Intended-Gateway-Core-Functional-Requirements"></div>
 
     
         <h2
 class="section-title"
 data-level="3.1"
->Devices Intended to be a Gateway
+>Abstract (Intended) Gateway Core Functional Requirements
 </h2>
     
 
   </section>
 
-  
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>The following are the functional requirements assumed to be the core of functionality of a vehicle gateway. As is mentioned above, any device which performs one or more of these functions is a gateway device and, furthermore, devices which are not intended to be gateways must have assurances that malicious code will not enable any one of these functionalities.</p>
+</div>
+
+    </div></section>
 
 </article>
           <article class="requirement">
@@ -2516,14 +2589,38 @@ data-level="3.1.4"
   </section>
 
 </article>
+          <article class="docsection">
+
+  <section data-section="meta" class="docsection_section">
+
+    <div data-role='anchor' id="3.2-Abstract-Intended-Gateway-Additional-Functional-Requirements"></div>
+
+    
+        <h2
+class="section-title"
+data-level="3.2"
+>Abstract (Intended) Gateway Additional Functional Requirements
+</h2>
+    
+
+  </section>
+
+  <section data-section="description" class="docsection_section"><div class="free-text">
+      <div class="document">
+<p>The following are the functional requirements assumed to also be features of intended gateways; however, devices which perform one or more of these functions are not necessarily assumed to be gateway devices -- as was the case with the requirements of the <em>Abstract (Intended) Gateway Core Functional Requirements</em> section.</p>
+</div>
+
+    </div></section>
+
+</article>
           <article class="requirement">
 
   <section class="requirement_section" data-section='meta'>
 
-    <div data-role='anchor' id="3.1.5-AGW-F-007"></div>
+    <div data-role='anchor' id="3.2.1-AGW-F-007"></div>
     <h3
 class="section-title"
-data-level="3.1.5"
+data-level="3.2.1"
 >Controllable
 </h3>
     <dl class="requirement_meta">
@@ -2560,10 +2657,10 @@ data-level="3.1.5"
 
   <section class="requirement_section" data-section='meta'>
 
-    <div data-role='anchor' id="3.1.6-AGW-F-008"></div>
+    <div data-role='anchor' id="3.2.2-AGW-F-008"></div>
     <h3
 class="section-title"
-data-level="3.1.6"
+data-level="3.2.2"
 >Configurable
 </h3>
     <dl class="requirement_meta">
@@ -2600,10 +2697,10 @@ data-level="3.1.6"
 
   <section class="requirement_section" data-section='meta'>
 
-    <div data-role='anchor' id="3.1.7-AGW-F-009"></div>
+    <div data-role='anchor' id="3.2.3-AGW-F-009"></div>
     <h3
 class="section-title"
-data-level="3.1.7"
+data-level="3.2.3"
 >Reports
 </h3>
     <dl class="requirement_meta">
@@ -2640,10 +2737,10 @@ data-level="3.1.7"
 
   <section class="requirement_section" data-section='meta'>
 
-    <div data-role='anchor' id="3.1.8-AGW-F-010"></div>
+    <div data-role='anchor' id="3.2.4-AGW-F-010"></div>
     <h3
 class="section-title"
-data-level="3.1.8"
+data-level="3.2.4"
 >Diagnoses
 </h3>
     <dl class="requirement_meta">
